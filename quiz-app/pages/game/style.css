@@ -65,6 +65,14 @@
 
 .game__secret-img {
   width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.planet__description-img {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
 }
 
 .game__info {

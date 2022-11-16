@@ -61,11 +61,7 @@
         </div>
         <div class="game">
           <div class="game__secret">
-            <img
-              class="game__secret-img"
-              src="../../assets/images/secret-planet.png"
-              alt="planet"
-            />
+            <div class="game__secret-img"></div>
           </div>
           <div class="game__info">
             <div class="game__secret-planet">*********</div>
@@ -86,15 +82,34 @@
         </div>
         <div class="planet">
           <div class="planet__description">
-            Listen to the player. Select a planet from the list.
+            <div class="planet__description-choose">
+              Listen to the player. Select a planet from the list.
+            </div>
+            <div class="planet__description-img"></div>
+            <div class="planet__description-name"></div>
+            <div class="game__secret-play">
+              <div class="game__play"></div>
+
+              <input
+                type="range"
+                class="game__progress-bar"
+                min="0"
+                max="86"
+                value="0"
+              />
+              <div class="game__currentTime">0:00</div>
+              <div class="game__durationTime">1:26</div>
+            </div>
+            <div class="planet__description-astronomical-bodies"></div>
+            <div class="planet__description-text"></div>
           </div>
           <div class="planet__choose">
-            <div class="planet__variant">Mercury</div>
-            <div class="planet__variant">Venus</div>
-            <div class="planet__variant">Earth</div>
-            <div class="planet__variant">Mars</div>
-            <div class="planet__variant">Jupiter</div>
-            <div class="planet__variant">Saturn</div>
+            <div id="Mercury" class="planet__variant">Mercury</div>
+            <div id="Venus" class="planet__variant">Venus</div>
+            <div id="Earth" class="planet__variant">Earth</div>
+            <div id="Mars" class="planet__variant">Mars</div>
+            <div id="Jupiter" class="planet__variant">Jupiter</div>
+            <div id="Saturn" class="planet__variant">Saturn</div>
           </div>
         </div>
       </div>
@@ -117,5 +132,6 @@
         </div>
       </div>
     </footer>
+    <script src="../index.js" type="module"></script>
   </body>
 </html>
