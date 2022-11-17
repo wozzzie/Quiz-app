@@ -58,56 +58,56 @@ const cosmosData = [
   [
     {
       id: 1,
-      name: "Mercury",
-      astronomicalBodies: "Planet",
+      name: "Yuri Gagarin",
+      astronomicalBodies: "Astronaut",
       description:
-        "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. It is named after the Roman god Mercurius, god of commerce, messenger of the gods, and mediator between gods and mortals. Mercury orbits the Sun within Earth's orbit as an inferior planet, and its apparent distance from the Sun as viewed from Earth never exceeds 28°.",
+        "Yuri Alekseyevich Gagarin was a Soviet pilot and cosmonaut who became the first human to journey into outer space. Travelling in the Vostok 1 capsule, Gagarin completed one orbit of Earth on 12 April 1961. By achieving this major milestone in the Space Race he became an international celebrity, and was awarded many medals and titles, including Hero of the Soviet Union, his nation's highest honour.",
       image: "../../assets/images/Mercury.png",
       audio: "",
     },
     {
       id: 2,
-      name: "Venus",
-      astronomicalBodies: "Planet",
+      name: "Valentina Tereshkova",
+      astronomicalBodies: "Astronaut",
       description:
-        "Venus is the second planet from the Sun. It is sometimes called Earth's 'sister' or 'twin' planet as it is almost as large and has a similar composition. As an interior planet to Earth, Venus appears in Earth's sky never far from the Sun, either as morning star or evening star. Aside from the Sun and Moon, Venus is the brightest natural object in Earth's sky, capable of casting visible shadows on Earth at dark conditions.",
-      image: "../../assets/images/Venus.png",
+        "Valentina Vladimirovna Tereshkova is former Soviet cosmonaut. She is known for being the first and youngest woman in space, having flown a solo mission on the Vostok 6 on 16 June 1963. She orbited the Earth 48 times, spent almost three days in space, and remains the only woman to have been on a solo space mission.",
+      image: "../../assets/images/tereshkova.jpeg",
       audio: "",
     },
     {
       id: 3,
-      name: "Earth",
-      astronomicalBodies: "Planet",
+      name: "Neil Armstrong",
+      astronomicalBodies: "Astronaut",
       description:
-        "Earth is the third planet from the Sun and the only astronomical object known to harbor life. While large volumes of water can be found throughout the Solar System, only Earth sustains liquid surface water. About 71% of Earth's surface is made up of the ocean, dwarfing Earth's polar ice, lakes, and rivers. The remaining 29% of Earth's surface is land, consisting of continents and islands",
-      image: "../../assets/images/Earth.png",
-      audio: "",
+        "Neil Alden Armstrong (August 5, 1930 – August 25, 2012) was an American astronaut and aeronautical engineer who became the first person to walk on the Moon in 1969. He was also a naval aviator, test pilot, and university professor.",
+      image: "../../assets/images/neil-armstrong.jpeg",
+      audio: "../../assets/audio/neil-armstrong.mp3",
     },
     {
       id: 4,
-      name: "Mars",
-      astronomicalBodies: "Planet",
+      name: "Frank Borman",
+      astronomicalBodies: "Astronaut",
       description:
-        "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In the English language, Mars is named for the Roman god of war. Mars is a terrestrial planet with a thin atmosphere (less than 1% that of Earth's), and has a crust primarily composed of elements similar to Earth's crust, as well as a core made of iron and nickel. Mars has surface features such as impact craters, valleys, dunes, and polar ice caps.",
-      image: "../../assets/images/Mars.png",
-      audio: "",
+        "Frank Frederick Borman II is a NASA astronaut. He was the commander of Apollo 8, the first mission to fly around the Moon, and together with crewmates Jim Lovell and William Anders, became the first of 24 humans to do so, for which he was awarded the Congressional Space Medal of Honor. As of 2022, he is the oldest living former American astronaut, eleven days older than Lovell.",
+      image: "../../assets/images/frank-borman.jpeg",
+      audio: "../../assets/audio/frank.mp3",
     },
     {
       id: 5,
-      name: "Jupiter",
-      astronomicalBodies: "Planet",
+      name: "Charles Conrad",
+      astronomicalBodies: "Astronaut",
       description:
-        "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, but slightly less than one-thousandth the mass of the Sun. Jupiter is the third brightest natural object in the Earth's night sky after the Moon and Venus, and it has been observed since prehistoric times. It was named after the Roman god Jupiter, the king of the gods.",
-      image: "../../assets/images/Jupiter.png",
-      audio: "",
+        "Charles Conrad Jr. was an American NASA astronaut, aeronautical engineer, naval officer and aviator, and test pilot, and commanded the Apollo 12 space mission, on which he became the third person to walk on the Moon. Conrad was selected in NASA's second astronaut class in 1962.",
+      image: "../../assets/images/charles-conrad.jpeg",
+      audio: "../../assets/audio/conrad.mp3",
     },
     {
       id: 6,
-      name: "Uranus",
-      astronomicalBodies: "Planet",
+      name: "Gherman Titov",
+      astronomicalBodies: "Astronaut",
       description:
-        "Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus, who, according to Greek mythology, was the great-grandfather of Ares (Mars), grandfather of Zeus (Jupiter) and father of Cronus (Saturn). It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.",
-      image: "../../assets/images/Uranus.png",
+        "Gherman Stepanovich Titov was a Soviet cosmonaut who, on 6 August 1961, became the second human to orbit the Earth, aboard Vostok 2, preceded by Yuri Gagarin on Vostok 1. He was the fourth person in space, counting suborbital voyages of US astronauts Alan Shepard and Gus Grissom. A month short of 26 years old at launch, he was the youngest person to fly in space.",
+      image: "../../assets/images/gherman-titov.jpeg",
       audio: "",
     },
   ],
@@ -150,15 +150,15 @@ const cosmosData = [
     },
     {
       id: 5,
-      name: "Jupiter",
+      name: "Uranus",
       astronomicalBodies: "Planet",
       description:
-        "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, but slightly less than one-thousandth the mass of the Sun. Jupiter is the third brightest natural object in the Earth's night sky after the Moon and Venus, and it has been observed since prehistoric times. It was named after the Roman god Jupiter, the king of the gods.",
-      image: "../../assets/images/Jupiter.png",
+        "Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus, who, according to Greek mythology, was the great-grandfather of Ares (Mars), grandfather of Zeus (Jupiter) and father of Cronus (Saturn). It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.",
+      image: "../../assets/images/Uranus.png",
       audio: "",
     },
     {
-      id: 5,
+      id: 6,
       name: "Neptune",
       astronomicalBodies: "Planet",
       description:
@@ -171,7 +171,7 @@ const cosmosData = [
     {
       id: 1,
       name: "The Sun",
-      astronomicalBodies: "Star",
+      astronomicalBodies: "Stars",
       description:
         "The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core. The Sun radiates this energy mainly as light, ultraviolet, and infrared radiation, and is the most important source of energy for life on Earth.",
       image: "../../assets/images/Sun.png",
@@ -180,7 +180,7 @@ const cosmosData = [
     {
       id: 2,
       name: "Vela Pulsar",
-      astronomicalBodies: "Star",
+      astronomicalBodies: "Stars",
       description:
         "A pulsar is a highly magnetized rotating neutron star that emits beams of electromagnetic radiation out of its magnetic poles. This radiation can be observed only when a beam of emission is pointing toward Earth (similar to the way a lighthouse can be seen only when the light is pointed in the direction of an observer), and is responsible for the pulsed appearance of emission.",
       image: "../../assets/images/vela-pulsar.jpeg",
@@ -189,7 +189,7 @@ const cosmosData = [
     {
       id: 3,
       name: "Iota Draconis",
-      astronomicalBodies: "Star",
+      astronomicalBodies: "Stars",
       description:
         "Iota Draconis, also named Edasich is a star in the northern circumpolar constellation of Draco. A visually unremarkable star of apparent magnitude 3.3, in 2002 it was discovered to have a planet orbiting it. From parallax measurements, this star is located at a distance of about 101.2 light-years from the Sun.",
       image: "../../assets/images/Iota-draconis.jpeg",
@@ -198,7 +198,7 @@ const cosmosData = [
     {
       id: 4,
       name: "Crab Pulsar",
-      astronomicalBodies: "Star",
+      astronomicalBodies: "Stars",
       description:
         "A pulsar is a highly magnetized rotating neutron star that emits beams of electromagnetic radiation out of its magnetic poles. This radiation can be observed only when a beam of emission is pointing toward Earth (similar to the way a lighthouse can be seen only when the light is pointed in the direction of an observer), and is responsible for the pulsed appearance of emission.",
       image: "../../assets/images/crab-pulsar.jpeg",
@@ -207,7 +207,7 @@ const cosmosData = [
     {
       id: 5,
       name: "Magnetar",
-      astronomicalBodies: "Star",
+      astronomicalBodies: "Stars",
       description:
         "A magnetar is a type of neutron star with an extremely powerful magnetic field. The magnetic-field decay powers the emission of high-energy electromagnetic radiation, particularly X-rays and gamma rays.",
       image: "../../assets/images/magnetar.jpeg",
@@ -216,7 +216,7 @@ const cosmosData = [
     {
       id: 6,
       name: "42 Draconis",
-      astronomicalBodies: "Carduelis carduelis",
+      astronomicalBodies: "Stars",
       description:
         "42 Draconis (abbreviated 42 Dra), formally named Fafnir is a 5th magnitude K-type giant star located approximately 315 light years away in the constellation of Draco. As of 2009, an extrasolar planet is thought to be orbiting the star.",
       image: "../../assets/images/draconis-42.jpeg",
