@@ -62,7 +62,7 @@ const cosmosData = [
       astronomicalBodies: "Astronaut",
       description:
         "Yuri Alekseyevich Gagarin was a Soviet pilot and cosmonaut who became the first human to journey into outer space. Travelling in the Vostok 1 capsule, Gagarin completed one orbit of Earth on 12 April 1961. By achieving this major milestone in the Space Race he became an international celebrity, and was awarded many medals and titles, including Hero of the Soviet Union, his nation's highest honour.",
-      image: "../../assets/images/Mercury.png",
+      image: "../../assets/images/yuri-gagarin.jpeg",
       audio: "",
     },
     {

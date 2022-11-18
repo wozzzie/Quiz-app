@@ -79,31 +79,38 @@
               <div class="game__durationTime">1:26</div>
             </div>
           </div>
-          <button class="game__button" >Next round</button>
+          <button class="game__button">Next round</button>
         </div>
         <div class="planet">
-          <div class="planet__description">
-            <div class="planet__description-choose">
-              Listen to the player. Select a planet from the list.
-            </div>
-            <div class="planet__description-img"></div>
-            <div class="planet__description-name"></div>
-            <div class="game__secret-play">
-              <div class="game__play"></div>
+          <div class="planet__block">
+            <div class="planet__description">
+              <div class="planet__description-choose">
+                Listen to the player. Select a planet from the list.
+              </div>
+              <div class="planet__description-img"></div>
+              <div class="planet__info">
+                <p class="planet__description-name"></p>
+                <p class="planet__description-astronomical-bodies"></p>
+                <div class="game__audio-play">
+                  <div class="game__secret-play">
+                    <div class="game__play"></div>
 
-              <input
-                type="range"
-                class="game__progress-bar"
-                min="0"
-                max="86"
-                value="0"
-              />
-              <div class="game__currentTime">0:00</div>
-              <div class="game__durationTime">1:26</div>
+                    <input
+                      type="range"
+                      class="game__progress-bar"
+                      min="0"
+                      max="86"
+                      value="0"
+                    />
+                    <div class="game__currentTime">0:00</div>
+                    <div class="game__durationTime">1:26</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="planet__description-astronomical-bodies"></div>
             <div class="planet__description-text"></div>
           </div>
+
           <div class="planet__choose">
             <div id="Mercury" class="planet__variant"></div>
             <div id="Venus" class="planet__variant"></div>

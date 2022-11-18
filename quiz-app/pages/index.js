@@ -1,34 +1,27 @@
 import cosmosData from "./data.js";
 
-const firstRound = cosmosData[0];
-const secondRound = cosmosData[1];
-const thirdRound = cosmosData[2];
-const fourthRound = cosmosData[3];
-const fifthRound = cosmosData[4];
-const sixthRound = cosmosData[5];
+const [
+  firstRound,
+  secondRound,
+  thirdRound,
+  fourthRound,
+  fifthRound,
+  sixthRound,
+] = cosmosData;
 
 const planet = document.querySelector(".game__secret-img");
-
 const questionsBlock = document.querySelectorAll(".questions__block");
-
 const nextRound = document.querySelector(".game__button");
-
 const planetsVariant = document.querySelectorAll(".planet__variant");
-
 const planetChoose = document.querySelector(".planet__choose");
-
 const planetDescription = document.querySelector(".planet__description-choose");
-
 const planetDescriptionImg = document.querySelector(".planet__description-img");
-
 const planetDescriptionName = document.querySelector(
   ".planet__description-name"
 );
-
 const planetDescriptionAstronomicalBodies = document.querySelector(
   ".planet__description-astronomical-bodies"
 );
-
 const planetDescriptionText = document.querySelector(
   ".planet__description-text"
 );
@@ -37,120 +30,92 @@ const playBtn = document.querySelector(".game__play"),
   planetName = document.querySelector(".game__secret-planet"),
   duration = document.querySelector(".game__durationTime"),
   current = document.querySelector(".game__currentTime"),
-  progressBar = document.querySelector(".game__progress-bar");
+  progressBar = document.querySelector(".game__progress-bar"),
+  audioPlay = document.querySelector(".game__audio-play");
 
-planet.style.backgroundImage = `url(../../assets/images/secret-planet.png)`;
 nextRound.disabled = true;
+nextRound.classList.add("game__button_disabled");
+audioPlay.classList.add("hidden");
+
 questionsBlock[0].style.backgroundColor = "rgb(84 73 163)";
+
 let win = false;
+let round = 0;
 
-let round = firstRound;
-
-function random() {
-  let item = cosmosData[0][Math.floor(Math.random() * cosmosData[0].length)];
-  return item;
+function random(data) {
+  return data[Math.floor(Math.random() * data.length)];
 }
 
-let randomObject = random();
+let randomObject = random(firstRound);
 
 var arrOfPlanets = Array.from(planetsVariant);
 
-arrOfPlanets.forEach((el) => {
-    console.log(el)
-  for (let index = 0; index < firstRound.length; index++) {
-    let element = firstRound[index];
-    // console.log(firstRound[0]);
-    // console.log(element.name)
-    el.innerHTML = element.name;
-  }
-});
-
-function setRound(round) {
-  for (let el of planetsVariant) {
-    el.addEventListener("click", (event) => {
-      console.log(event.target.innerHTML);
-      if (event.target.innerHTML === randomObject.name) {
-        nextRound.disabled = false;
-        win = true;
-        console.log("YEEYEYYEYEY");
-        planetName.innerHTML = randomObject.name;
-        planet.style.backgroundImage = `url(${randomObject.image})`;
-        event.target.style.background =
-          "linear-gradient(180deg,rgb(81 155 118) 0%,rgb(29 58 108 / 50%) 100%)";
-      } else if (event.target.id !== randomObject.id) {
-        console.log("NO!");
-        event.target.style.background =
-          "linear-gradient(180deg,rgb(155 73 73) 0%,rgb(29 58 108 / 50%) 100%)";
-      }
-      planetDescription.innerText = "";
-    });
-  }
-  //   planetChoose.addEventListener("click", (event) => {
-  //     if (event.target.id === randomObject.id) {
-  //       nextRound.disabled = false;
-  //       win = true;
-  //       console.log("YEEYEYYEYEY");
-  //       planetName.innerHTML = randomObject.name;
-  //       planet.style.backgroundImage = `url(${randomObject.image})`;
-  //       event.target.style.background =
-  //         "linear-gradient(180deg,rgb(81 155 118) 0%,rgb(29 58 108 / 50%) 100%)";
-  //     } else if (event.target.id !== randomObject.id) {
-  //       console.log("NO!");
-  //       event.target.style.background =
-  //         "linear-gradient(180deg,rgb(155 73 73) 0%,rgb(29 58 108 / 50%) 100%)";
-  //     }
-  //     console.log(event.target.id);
-  //     planetDescription.innerText = "";
-  //     //   planetDescriptionImg.style.backgroundImage = `url(${randomObject.image})`;
-  //     //   planetDescriptionName.innerText = randomObject.name;
-  //     //   planetDescriptionAstronomicalBodies.innerText =
-  //     //     randomObject.astronomicalBodies;
-  //     //   planetDescriptionText.innerText = randomObject.description;
-
-  //     //   cosmosData.filter((el) => {
-  //     //     for (let item in el) {
-  //     //       //   console.log(el[item].id);
-  //     //       let idItem = el[item].id;
-  //     //       if (idItem === event.target.id) {
-  //     //         planetDescriptionImg.style.backgroundImage = `url(${idItem.image})`;
-  //     //         planetDescriptionName.innerText = idItem.name;
-  //     //         planetDescriptionAstronomicalBodies.innerText =
-  //     //           idItem.astronomicalBodies;
-  //     //         planetDescriptionText.innerText = idItem.description;
-  //     //       }
-  //     //     }
-  //     //   });
-  //   });
+function renderAnswersBtns(data) {
+  data.forEach((el, index) => (arrOfPlanets[index].innerHTML = el.name));
 }
 
-// function random(round) {
-//   let item;
-//   switch (round) {
-//     case firstRound:
-//       return (item =
-//         cosmosData[0][Math.floor(Math.random() * cosmosData[0].length)]);
-//     case secondRound:
-//       return (item =
-//         cosmosData[1][Math.floor(Math.random() * cosmosData[0].length)]);
-//     case thirdRound:
-//       return (item =
-//         cosmosData[2][Math.floor(Math.random() * cosmosData[0].length)]);
-//     case fourthRound:
-//       return (item =
-//         cosmosData[3][Math.floor(Math.random() * cosmosData[0].length)]);
-//     case fifthRound:
-//       return (item =
-//         cosmosData[4][Math.floor(Math.random() * cosmosData[0].length)]);
-//     case sixthRound:
-//       return (item =
-//         cosmosData[5][Math.floor(Math.random() * cosmosData[0].length)]);
-//   }
-// }
+renderAnswersBtns(firstRound);
 
-// let selectedRound = setRound(firstRound);
+function clickAnswerBtn(event) {
+  console.log(event.target.innerHTML);
+  if (event.target.innerHTML === randomObject.name) {
+    nextRound.disabled = false;
+    nextRound.classList.remove("game__button_disabled");
+    win = true;
+    console.log("++round");
+    if (round === 6) {
+      return;
+    } else if (round === 5) {
+      nextRound.innerHTML = "GAME OVER";
+      window.location.href = "../results/index.html";
+    }
+    round++;
+    console.log("YEEYEYYEYEY", win);
+    planetName.innerHTML = randomObject.name;
+    planet.style.backgroundImage = `url(${randomObject.image})`;
+    event.target.style.background =
+      "linear-gradient(180deg,rgb(81 155 118) 0%,rgb(29 58 108 / 50%) 100%)";
+  } else if (event.target.innerHTML !== randomObject.name) {
+    console.log("NO!");
+    event.target.style.background =
+      "linear-gradient(180deg,rgb(155 73 73) 0%,rgb(29 58 108 / 50%) 100%)";
+  }
+
+  let cosmosArr = cosmosData.flat();
+
+  cosmosArr.forEach((el) => {
+    if (event.target.innerHTML === el.name) {
+      audioPlay.classList.remove("hidden");
+      //todo
+      planetDescriptionImg.style.backgroundImage = `url(${el.image})`;
+      planetDescriptionName.innerHTML = el.name;
+      planetDescriptionAstronomicalBodies.innerHTML = el.astronomicalBodies;
+      planetDescriptionText.innerText = el.description;
+    }
+  });
+
+  planetDescription.innerText = "";
+}
+
+function setRound(roundData) {
+  randomObject = random(roundData);
+  renderAnswersBtns(roundData);
+
+  planetsVariant.forEach((planetItem) =>
+    planetItem.removeEventListener("click", clickAnswerBtn)
+  );
+  planetsVariant.forEach((planetItem) =>
+    planetItem.addEventListener("click", clickAnswerBtn)
+  );
+
+  planetsVariant.forEach((planetItem) => {
+    planetItem.style.background =
+      "linear-gradient( 180deg, rgb(129 72 212) 0%, rgb(29 58 108 / 50%) 100% )";
+  });
+}
 
 const audio = new Audio(randomObject.audio);
-console.log(audio);
+// console.log(audio);
 
 let isPlay = false;
 
@@ -203,27 +168,40 @@ progressBar.addEventListener("input", () => {
 //   return Math.round(rand);
 // }
 
-// function setGame() {
-//   setRound(firstRound);
+function setGame() {
+  setRound(firstRound);
 
-//   const moveTo = (event, delta) => {
-//     event.stopPropagation();
+  const moveTo = (event, delta) => {
+    const questions = [...questionsBlock];
+    console.log("round", round);
+    questions.forEach(
+      (el) =>
+        (el.style.background =
+          "linear-gradient( 96.23deg, rgba(174, 129, 177, 0.5) -10.68%, rgba(254, 247, 245, 0.25) -10.68%, rgba(123, 169, 255, 0.25) 100% )")
+    );
+    if (round === 6) {
+      return;
+    }
+    questions[round].style.backgroundColor = "rgb(84 73 163)";
+  };
 
-//     const size = questionsBlock.length,
-//       currIndex = [...questionsBlock].findIndex(
-//         (q) => (q.style.backgroundColor = "rgb(84 73 163)")
-//       ),
-//       nextIndex = (currIndex + delta + size) % size;
-//     questionsBlock[currIndex].style.background =
-//       "linear-gradient( 96.23deg, rgba(174, 129, 177, 0.5) -10.68%, rgba(254, 247, 245, 0.25) -10.68%, rgba(123, 169, 255, 0.25) 100% )";
+  nextRound.addEventListener("click", (e) => {
+    moveTo(e);
+    if (round === 6) {
+      return;
+    } else {
+      setRound(cosmosData[round]);
+      nextRound.classList.add("game__button_disabled");
+      planetDescription.innerText =
+        "Listen to the player. Select a planet from the list.";
+      audioPlay.classList.add("hidden");
+      planetDescriptionImg.style.backgroundImage = "";
+      planetDescriptionName.innerHTML = "";
+      planetDescriptionAstronomicalBodies.innerHTML = "";
+      planetDescriptionText.innerText = "";
+    }
+    console.log("randomObject", randomObject);
+  });
+}
 
-//     questionsBlock[nextIndex].style.backgroundColor = "rgb(84 73 163)";
-//   };
-
-//   nextRound.addEventListener("click", (e) => {
-//     moveTo(e, +1);
-//     setRound(secondRound);
-//   });
-// }
-
-// setGame();
+setGame();

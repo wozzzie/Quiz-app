@@ -67,6 +67,7 @@
   width: 200px;
   height: 200px;
   background-size: cover;
+  background-image: url("../../assets/images/secret-planet.png");
 }
 
 .planet__description-img {
@@ -188,23 +189,42 @@
   gap: 30px;
 }
 
-.planet__description {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
+.planet__block {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(
     179.96deg,
     rgba(255, 255, 255, 0.25) 0.04%,
     rgba(87, 177, 255, 0) 130.08%
   );
   border-radius: 46px;
+  padding: 20px;
+  width: 100%;
+  height: 410px;
+}
+
+.planet__info {
+  margin-left: 40px;
+}
+
+.planet__description-name {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.planet__description {
+  display: flex;
+}
+
+.planet__description-text {
+  margin-top: 20px;
 }
 
 .planet__choose {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 410px;
   padding: 20px;
   background: linear-gradient(
     179.96deg,
@@ -232,4 +252,16 @@
 .planet__description {
   font-size: 22px;
   font-weight: 600;
+}
+
+.game__button_disabled {
+  background: linear-gradient(
+    180deg,
+    rgb(120, 111, 134) 0%,
+    rgb(29 58 108 / 50%) 100%
+  );
+}
+
+.hidden {
+  display: none;
 }
