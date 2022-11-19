@@ -36,11 +36,13 @@ const playBtn = document.querySelector(".game__play"),
 nextRound.disabled = true;
 nextRound.classList.add("game__button_disabled");
 audioPlay.classList.add("hidden");
+planet.style.backgroundImage = "url(../../assets/images/secret-planet.png)";
 
 questionsBlock[0].style.backgroundColor = "rgb(84 73 163)";
 
 let win = false;
 let round = 0;
+let isPlay = false;
 
 function random(data) {
   return data[Math.floor(Math.random() * data.length)];
@@ -58,10 +60,13 @@ renderAnswersBtns(firstRound);
 
 function clickAnswerBtn(event) {
   console.log(event.target.innerHTML);
+
   if (event.target.innerHTML === randomObject.name) {
     nextRound.disabled = false;
     nextRound.classList.remove("game__button_disabled");
     win = true;
+    event.target.setAttribute("id", "winningItem");
+
     console.log("++round");
     if (round === 6) {
       return;
@@ -70,6 +75,7 @@ function clickAnswerBtn(event) {
       window.location.href = "../results/index.html";
     }
     round++;
+    event.target.disabled = true;
     console.log("YEEYEYYEYEY", win);
     planetName.innerHTML = randomObject.name;
     planet.style.backgroundImage = `url(${randomObject.image})`;
@@ -85,6 +91,8 @@ function clickAnswerBtn(event) {
 
   cosmosArr.forEach((el) => {
     if (event.target.innerHTML === el.name) {
+      event.target.disabled = false;
+
       audioPlay.classList.remove("hidden");
       //todo
       planetDescriptionImg.style.backgroundImage = `url(${el.image})`;
@@ -99,6 +107,62 @@ function clickAnswerBtn(event) {
 
 function setRound(roundData) {
   randomObject = random(roundData);
+
+  console.log(randomObject.audio);
+
+  let audio = new Audio(randomObject.audio);
+
+  function playPause() {
+    if (!isPlay) {
+      playAudio();
+      playBtn.classList.add("game__pause");
+    } else {
+      audio.pause();
+      isPlay = false;
+
+      playBtn.classList.remove("game__pause");
+    }
+  }
+
+  playBtn.addEventListener("click", playPause);
+
+  async function playAudio() {
+    await audio.play();
+    isPlay = true;
+    duration.textContent = getTimeCodeFromNum(audio.duration);
+  }
+  //todo
+  nextRound.addEventListener("click", () => {
+    audio.pause();
+    isPlay = false;
+    audio.currentTime = 0;
+    playBtn.classList.remove("game__pause");
+    playAudio();
+  });
+
+  function getTimeCodeFromNum(num) {
+    let seconds = parseInt(num);
+    let minutes = parseInt(seconds / 60);
+    seconds -= minutes * 60;
+    const hours = parseInt(minutes / 60);
+    minutes -= hours * 60;
+
+    if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+    return `${String(hours).padStart(2, 0)}:${minutes}:${String(
+      seconds % 60
+    ).padStart(2, 0)}`;
+  }
+
+  setInterval(() => {
+    progressBar.value = audio.currentTime;
+    current.textContent = getTimeCodeFromNum(audio.currentTime);
+    progressBar.max = audio.duration;
+  }, 500);
+
+  progressBar.addEventListener("input", () => {
+    audio.currentTime = progressBar.value;
+  });
+
   renderAnswersBtns(roundData);
 
   planetsVariant.forEach((planetItem) =>
@@ -114,53 +178,53 @@ function setRound(roundData) {
   });
 }
 
-const audio = new Audio(randomObject.audio);
+// let audio = new Audio(randomObject.audio);
 // console.log(audio);
 
-let isPlay = false;
+// let isPlay = false;
 
-function playPause() {
-  if (!isPlay) {
-    playAudio();
-    playBtn.classList.add("game__pause");
-  } else {
-    audio.pause();
-    isPlay = false;
+// function playPause() {
+//   if (!isPlay) {
+//     playAudio();
+//     playBtn.classList.add("game__pause");
+//   } else {
+//     audio.pause();
+//     isPlay = false;
 
-    playBtn.classList.remove("game__pause");
-  }
-}
+//     playBtn.classList.remove("game__pause");
+//   }
+// }
 
-playBtn.addEventListener("click", playPause);
+// playBtn.addEventListener("click", playPause);
 
-async function playAudio() {
-  await audio.play();
-  isPlay = true;
-  duration.textContent = getTimeCodeFromNum(audio.duration);
-}
+// async function playAudio() {
+//   await audio.play();
+//   isPlay = true;
+//   duration.textContent = getTimeCodeFromNum(audio.duration);
+// }
 
-function getTimeCodeFromNum(num) {
-  let seconds = parseInt(num);
-  let minutes = parseInt(seconds / 60);
-  seconds -= minutes * 60;
-  const hours = parseInt(minutes / 60);
-  minutes -= hours * 60;
+// function getTimeCodeFromNum(num) {
+//   let seconds = parseInt(num);
+//   let minutes = parseInt(seconds / 60);
+//   seconds -= minutes * 60;
+//   const hours = parseInt(minutes / 60);
+//   minutes -= hours * 60;
 
-  if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
-  return `${String(hours).padStart(2, 0)}:${minutes}:${String(
-    seconds % 60
-  ).padStart(2, 0)}`;
-}
+//   if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+//   return `${String(hours).padStart(2, 0)}:${minutes}:${String(
+//     seconds % 60
+//   ).padStart(2, 0)}`;
+// }
 
-setInterval(() => {
-  progressBar.value = audio.currentTime;
-  current.textContent = getTimeCodeFromNum(audio.currentTime);
-  progressBar.max = audio.duration;
-}, 500);
+// setInterval(() => {
+//   progressBar.value = audio.currentTime;
+//   current.textContent = getTimeCodeFromNum(audio.currentTime);
+//   progressBar.max = audio.duration;
+// }, 500);
 
-progressBar.addEventListener("input", () => {
-  audio.currentTime = progressBar.value;
-});
+// progressBar.addEventListener("input", () => {
+//   audio.currentTime = progressBar.value;
+// });
 
 // function randomPlanet(min, max) {
 //   let rand = min - 0.5 + Math.random() * (max - min + 1);
@@ -191,6 +255,9 @@ function setGame() {
       return;
     } else {
       setRound(cosmosData[round]);
+      planetName.innerHTML = "*********";
+      planet.style.backgroundImage =
+        "url(../../assets/images/secret-planet.png)";
       nextRound.classList.add("game__button_disabled");
       planetDescription.innerText =
         "Listen to the player. Select a planet from the list.";

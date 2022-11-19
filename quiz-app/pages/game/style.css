@@ -67,13 +67,14 @@
   width: 200px;
   height: 200px;
   background-size: cover;
-  background-image: url("../../assets/images/secret-planet.png");
+  background-position: center;
 }
 
 .planet__description-img {
   width: 200px;
   height: 200px;
   background-size: cover;
+  background-position: center;
 }
 
 .game__info {
@@ -217,7 +218,7 @@
 }
 
 .planet__description-text {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .planet__choose {
@@ -247,6 +248,7 @@
   font-weight: 600;
   text-align: center;
   cursor: pointer;
+  border: none;
 }
 
 .planet__description {
