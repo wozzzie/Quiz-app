@@ -1,7 +1,7 @@
 const cosmosData = [
   [
     {
-      id: "Mercury",
+      id: 1,
       name: "Mercury",
       astronomicalBodies: "Planet",
       description:
@@ -10,7 +10,7 @@ const cosmosData = [
       audio: "../../assets/audio/mercury.mp3",
     },
     {
-      id: "Venus",
+      id: 2,
       name: "Venus",
       astronomicalBodies: "Planet",
       description:
@@ -19,7 +19,7 @@ const cosmosData = [
       audio: "../../assets/audio/venera.mp3",
     },
     {
-      id: "Earth",
+      id: 3,
       name: "Earth",
       astronomicalBodies: "Planet",
       description:
@@ -28,7 +28,7 @@ const cosmosData = [
       audio: "../../assets/audio/earth.mp3",
     },
     {
-      id: "Mars",
+      id: 4,
       name: "Mars",
       astronomicalBodies: "Planet",
       description:
@@ -37,7 +37,7 @@ const cosmosData = [
       audio: "../../assets/audio/mars.mp3",
     },
     {
-      id: "Jupiter",
+      id: 5,
       name: "Jupiter",
       astronomicalBodies: "Planet",
       description:
@@ -46,7 +46,7 @@ const cosmosData = [
       audio: "../../assets/audio/jupiter.mp3",
     },
     {
-      id: "Saturn",
+      id: 6,
       name: "Saturn",
       astronomicalBodies: "Planet",
       description:
@@ -114,22 +114,23 @@ const cosmosData = [
   [
     {
       id: 1,
-      name: "Mercury",
-      astronomicalBodies: "Planet",
-      description:
-        "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. It is named after the Roman god Mercurius, god of commerce, messenger of the gods, and mediator between gods and mortals.",
-      image: "../../assets/images/Mercury.png",
-      audio: "",
-    },
-    {
-      id: 2,
       name: "Venus",
       astronomicalBodies: "Planet",
       description:
         "Venus is the second planet from the Sun. It is sometimes called Earth's 'sister' or 'twin' planet as it is almost as large and has a similar composition. As an interior planet to Earth, Venus appears in Earth's sky never far from the Sun, either as morning star or evening star.",
       image: "../../assets/images/Venus.png",
-      audio: "",
+      audio: "../../assets/audio/venera.mp3",
     },
+    {
+      id: 2,
+      name: "Mercury",
+      astronomicalBodies: "Planet",
+      description:
+        "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. It is named after the Roman god Mercurius, god of commerce, messenger of the gods, and mediator between gods and mortals.",
+      image: "../../assets/images/Mercury.png",
+      audio: "../../assets/audio/mercury.mp3",
+    },
+
     {
       id: 3,
       name: "Earth",
@@ -137,7 +138,7 @@ const cosmosData = [
       description:
         "Earth is the third planet from the Sun and the only astronomical object known to harbor life. While large volumes of water can be found throughout the Solar System, only Earth sustains liquid surface water. About 71% of Earth's surface is made up of the ocean, dwarfing Earth's polar ice, lakes, and rivers.",
       image: "../../assets/images/Earth.png",
-      audio: "",
+      audio: "../../assets/audio/earth.mp3",
     },
     {
       id: 4,
@@ -146,7 +147,7 @@ const cosmosData = [
       description:
         "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In the English language, Mars is named for the Roman god of war. Mars is a terrestrial planet with a thin atmosphere (less than 1% that of Earth's), and has a crust primarily composed of elements similar to Earth's crust.",
       image: "../../assets/images/Mars.png",
-      audio: "",
+      audio: "../../assets/audio/mars.mp3",
     },
     {
       id: 5,

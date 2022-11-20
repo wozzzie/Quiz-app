@@ -124,6 +124,18 @@
   background-repeat: no-repeat;
 }
 
+.planet__play {
+  height: 50px;
+  width: 50px;
+  filter: invert(1);
+  cursor: pointer;
+  font-size: 53px;
+  transition: 0.3s;
+  background-image: url("../../assets/icons/play.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .game__play:hover {
   opacity: 0.75;
 }
@@ -132,7 +144,8 @@
   background-image: url("../../assets/icons/pause.png");
 }
 
-.game__progress-bar {
+.game__progress-bar,
+.planet__progress-bar {
   transition: 0.5s;
 
   appearance: none;
@@ -144,7 +157,8 @@
   border-radius: 30px;
 }
 
-.game__progress-bar::-webkit-slider-thumb {
+.game__progress-bar::-webkit-slider-thumb,
+.planet__progress-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -3px;
   margin-left: 0px;
@@ -160,7 +174,8 @@
   cursor: pointer;
 }
 
-.game__progress-bar::-webkit-slider-runnable-track {
+.game__progress-bar::-webkit-slider-runnable-track,
+.planet__progress-bar::-webkit-slider-runnable-track {
   appearance: none;
   appearance: none;
   cursor: pointer;
@@ -168,17 +183,20 @@
   border-radius: 30px;
 }
 
-.game__progress-bar:focus {
+.game__progress-bar:focus,
+.planet__progress-bar:focus {
   outline: none;
 }
 
-.game__currentTime {
+.game__currentTime,
+.planet__currentTime {
   position: absolute;
   top: 35px;
   left: 78px;
 }
 
-.game__durationTime {
+.game__durationTime,
+.planet__durationTime {
   position: absolute;
   right: 0;
   top: 35px;
@@ -266,4 +284,19 @@
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .game {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .planet {
+    display: flex;
+    flex-direction: column;
+  }
 }

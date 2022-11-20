@@ -14,10 +14,10 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="../../assets/favicon/favicon.ico" />
     <!-- MAIN STYLES -->
+    <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="./style.css" />
     <!-- TITLE -->
-    <title>Solar-system quiz</title>
+    <title>Gallery</title>
   </head>
   <body class="body">
     <header class="header">
@@ -25,14 +25,16 @@
         <nav class="nav">
           <ul class="list">
             <li class="list__item">
-              <a href="index.html">
+              <a href="../start/index.html">
                 <img
                   class="list__item_logo"
                   src="../../assets/favicon/favicon.ico"
                   alt="logo"
               /></a>
             </li>
-            <li class="list__item active">Start</li>
+            <li class="list__item">
+              <a class="list__link" href="../start/index.html">Start</a>
+            </li>
             <li class="list__item">
               <a class="list__link" href="../game/index.html">Game</a>
             </li>
@@ -40,26 +42,45 @@
               <a class="list__link" href="../results/index.html">Results</a>
             </li>
             <li class="list__item">
-              <a class="list__link" href="../gallery/index.html">Gallery</a>
+              <a class="list__link active" href="index.html">Gallery</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main">
-      <div class="container">
-        <div class="intro">
-          <p class="intro__text">
-            Solar <span class="intro__text_active">System</span> Exploration
-          </p>
-          <p class="intro__subtext">
-            Welcome to Solar-system Quiz, this is the website designed for
-            people who want to explore our planet and who are interested in
-            space. While doing the quiz,<span class="intro__subtext_active"
-              >you can listen to the sounds of planets and space.</span
-            >
-            Have fun and hope you enjoy!
-          </p>
+      <div class="conatiner">
+        <div class="gallery">
+          <div class="gallery__item">
+            <div class="item__block">
+              <div class="item__img"></div>
+              <div class="item__info">
+                <p class="item__name"></p>
+                <p class="item__astronomical-body"></p>
+                <div class="item__audio-play">
+                  <div class="item__secret-play">
+                    <div class="item__play"></div>
+
+                    <input
+                      type="range"
+                      class="item__progress-bar"
+                      min="0"
+                      max="86"
+                      value="0"
+                    />
+                    <div class="item__currentTime"></div>
+                    <div class="item__durationTime"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="item__description"></p>
+          </div>
+          <div class="gallery__item"></div>
+          <div class="gallery__item"></div>
+          <div class="gallery__item"></div>
+          <div class="gallery__item"></div>
+          <div class="gallery__item"></div>
         </div>
       </div>
     </main>
@@ -81,5 +102,6 @@
         </div>
       </div>
     </footer>
+    <script src="./script.js" type="module"></script>
   </body>
 </html>
