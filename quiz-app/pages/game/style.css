@@ -1,0 +1,318 @@
+.body {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../../assets/images/moon.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.questions {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.questions__block {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background: linear-gradient(
+    96.23deg,
+    rgba(174, 129, 177, 0.5) -10.68%,
+    rgba(254, 247, 245, 0.25) -10.68%,
+    rgba(123, 169, 255, 0.25) 100%
+  );
+  opacity: 0.8;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.score {
+  text-align: right;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.score-number {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.game {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: linear-gradient(
+    179.96deg,
+    rgba(255, 255, 255, 0.25) 0.04%,
+    rgba(87, 177, 255, 0) 130.08%
+  );
+  border-radius: 46px;
+}
+
+.game__secret-img {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.planet__description-img {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.game__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.game__button {
+  height: 50px;
+  width: 100%;
+  border: none;
+  background: linear-gradient(
+    180deg,
+    rgb(129 72 212) 0%,
+    rgb(29 58 108 / 50%) 100%
+  );
+  border-radius: 46px;
+  padding: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.game__secret-planet {
+  font-size: 50px;
+}
+
+.game__secret-play {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.game__play {
+  height: 50px;
+  width: 50px;
+  filter: invert(1);
+  cursor: pointer;
+  font-size: 53px;
+  transition: 0.3s;
+  background-image: url("../../assets/icons/play.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.planet__play {
+  height: 50px;
+  width: 50px;
+  filter: invert(1);
+  cursor: pointer;
+  font-size: 53px;
+  transition: 0.3s;
+  background-image: url("../../assets/icons/play.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.game__play:hover {
+  opacity: 0.75;
+}
+
+.game__pause {
+  background-image: url("../../assets/icons/pause.png");
+}
+
+.game__progress-bar,
+.planet__progress-bar {
+  transition: 0.5s;
+
+  appearance: none;
+
+  height: 5px;
+  background: white;
+  width: 213.4px;
+
+  border-radius: 30px;
+}
+
+.game__progress-bar::-webkit-slider-thumb,
+.planet__progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -3px;
+  margin-left: 0px;
+  height: 10px;
+  width: 7px;
+  border: 0;
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(213, 213, 213),
+    rgba(109, 141, 255, 0.59)
+  );
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.game__progress-bar::-webkit-slider-runnable-track,
+.planet__progress-bar::-webkit-slider-runnable-track {
+  appearance: none;
+  appearance: none;
+  cursor: pointer;
+  max-height: 5px;
+  border-radius: 30px;
+}
+
+.game__progress-bar:focus,
+.planet__progress-bar:focus {
+  outline: none;
+}
+
+.game__currentTime,
+.planet__currentTime {
+  position: absolute;
+  top: 35px;
+  left: 78px;
+}
+
+.game__durationTime,
+.planet__durationTime {
+  position: absolute;
+  right: 0;
+  top: 35px;
+}
+
+.planet {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.planet__block {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    179.96deg,
+    rgba(255, 255, 255, 0.25) 0.04%,
+    rgba(87, 177, 255, 0) 130.08%
+  );
+  border-radius: 46px;
+  padding: 20px;
+  width: 100%;
+  height: 410px;
+}
+
+.planet__info {
+  margin-left: 40px;
+}
+
+.planet__description-name {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.planet__description {
+  display: flex;
+}
+
+.planet__description-text {
+  margin-top: 10px;
+}
+
+.planet__choose {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 410px;
+  padding: 20px;
+  background: linear-gradient(
+    179.96deg,
+    rgba(255, 255, 255, 0.25) 0.04%,
+    rgba(87, 177, 255, 0) 130.08%
+  );
+  border-radius: 46px;
+  gap: 10px;
+}
+
+.planet__variant {
+  background: linear-gradient(
+    180deg,
+    rgb(129 72 212) 0%,
+    rgb(29 58 108 / 50%) 100%
+  );
+  border-radius: 46px;
+  padding: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.planet__variant_wrong {
+  background: linear-gradient(
+    180deg,
+    rgb(155 73 73) 0%,
+    rgb(29 58 108 / 50%) 100%
+  );
+}
+
+.planet__variant_right {
+  background: linear-gradient(
+    180deg,
+    rgb(81 155 118) 0%,
+    rgb(29 58 108 / 50%) 100%
+  );
+}
+
+.planet__description {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.game__button_disabled {
+  background: linear-gradient(
+    180deg,
+    rgb(120, 111, 134) 0%,
+    rgb(29 58 108 / 50%) 100%
+  );
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .game {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .planet {
+    display: flex;
+    flex-direction: column;
+  }
+}
