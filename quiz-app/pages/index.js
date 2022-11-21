@@ -45,7 +45,17 @@ planet.style.backgroundImage = "url(../../assets/images/secret-planet.png)";
 
 questionsBlock[0].style.backgroundColor = "rgb(84 73 163)";
 
+console.log(
+  `в начале игры количество баллов 0.
+   Если игрок дал правильный ответ с первой 
+   попытки, его счёт увеличивается на 5 баллов, 
+   каждая следующая попытка даёт на один балл меньше, 
+   если правильный ответ дан только с последней, шестой попытки, 
+   игрок получает за него 0 баллов. Баллы за все вопросы суммируются`
+);
+
 let score = 0;
+let scoreOfGame = 0;
 let attempt = 0;
 let win = false;
 let round = 0;
@@ -69,49 +79,84 @@ function renderAnswersBtns(data) {
 
 renderAnswersBtns(firstRound);
 
+secretPlay.addEventListener("click", () => {
+  playBtn.classList.remove("game__pause");
+
+  console.log("isSecretPlay", isSecretPlay);
+  if (!isSecretPlay) {
+    audio.pause();
+    isPlay = false;
+    playPlanetAudio();
+    secretPlay.classList.add("game__pause");
+  } else {
+    planetAudio.pause();
+    isSecretPlay = false;
+
+    secretPlay.classList.remove("game__pause");
+  }
+});
+
 function clickAnswerBtn(event) {
-  console.log(event.target.innerHTML);
+  const eventClassList = [...event.target.classList].flat();
+  const isPressedBtn =
+    eventClassList.indexOf("planet__variant_wrong") === -1 &&
+    eventClassList.indexOf("planet__variant_right") === -1;
 
-  if (event.target.innerHTML === randomObject.name) {
-    nextRound.disabled = false;
-    nextRound.classList.remove("game__button_disabled");
-    win = true;
-    event.target.setAttribute("id", "winningItem");
-    changeAudio("right");
-    // audioBtn.paused();
-    attempt++;
-    console.log(attempt);
-    // if(){
-
-    // }
-    scoreNumber.innerHTML = attempt;
-
-    if (round === 6) {
-      return;
-    } else if (round === 5) {
-      localStorage.setItem("score", attempt);
-      nextRound.innerHTML = "GAME OVER";
-      window.location.href = "../results/index.html";
+  // console.log('classlist', [...event.target.classList])
+  if (isPressedBtn) {
+    if (attempt === 0) {
+      scoreOfGame += 5;
     }
 
-    console.log("YEEYEYYEYEY", win);
-    planetName.innerHTML = randomObject.name;
-    planet.style.backgroundImage = `url(${randomObject.image})`;
-    event.target.style.background =
-      "linear-gradient(180deg,rgb(81 155 118) 0%,rgb(29 58 108 / 50%) 100%)";
-  } else {
-    console.log("NO!", win);
+    if (attempt >= 1 && attempt <= 5) {
+      scoreOfGame -= 1;
+    }
 
-    if (!win) {
-      attempt++;
-      event.target.style.background =
-        "linear-gradient(180deg,rgb(155 73 73) 0%,rgb(29 58 108 / 50%) 100%)";
-      changeAudio("wrong");
+    console.log(attempt);
+    if (event.target.innerHTML === randomObject.name) {
+      nextRound.disabled = false;
+      nextRound.classList.remove("game__button_disabled");
+      win = true;
+      attempt = 0;
+      score = scoreOfGame;
+      event.target.setAttribute("id", "winningItem");
+
+      changeAudio("right");
+      // audioBtn.paused();
+
+      // if(){
+
+      // }
+      scoreNumber.innerHTML = score;
+
+      if (round === 6) {
+        return;
+      } else if (round === 5) {
+        localStorage.setItem("score", score);
+        nextRound.innerHTML = "GAME OVER";
+        window.location.href = "../results/index.html";
+      }
+
+      console.log("YEEYEYYEYEY", win);
+      planetName.innerHTML = randomObject.name;
+      planet.style.backgroundImage = `url(${randomObject.image})`;
+      event.target.classList.add("planet__variant_right");
+    } else {
+      console.log("NO!", win);
+
+      if (!win) {
+        ++attempt;
+        event.target.classList.add("planet__variant_wrong");
+        changeAudio("wrong");
+      }
     }
   }
+  console.log("attempt", attempt);
 
-  let cosmosArr = cosmosData.flat();
+  let cosmosArr = cosmosData[round].flat();
+
   cosmosArr.forEach((el) => {
+    console.log("innerHTML", event.target.innerHTML === el.name);
     if (event.target.innerHTML === el.name) {
       event.target.disabled = false;
 
@@ -119,22 +164,10 @@ function clickAnswerBtn(event) {
       secretPlay.classList.remove("game__pause");
 
       planetAudio.src = el.audio;
-      secretPlay.addEventListener("click", () => {
-        audio.pause();
-        playBtn.classList.remove("game__pause");
+      console.log(secretPlay);
 
-        if (!isSecretPlay) {
-          playPlanetAudio();
-          secretPlay.classList.add("game__pause");
-        } else {
-          planetAudio.pause();
-          isSecretPlay = false;
-
-          secretPlay.classList.remove("game__pause");
-        }
-      });
       console.log(audio.src);
-      //todo
+      // TODO
       planetDescriptionImg.style.backgroundImage = `url(${el.image})`;
       planetDescriptionName.innerHTML = el.name;
       planetDescriptionAstronomicalBodies.innerHTML = el.astronomicalBodies;
@@ -146,11 +179,12 @@ function clickAnswerBtn(event) {
 }
 
 function playPause() {
+  console.log("audioPlay", isPlay);
   if (!isPlay) {
     planetAudio.pause();
-
+    isSecretPlay = false;
     playAudio();
-
+    secretPlay.classList.remove("game__pause");
     playBtn.classList.add("game__pause");
   } else {
     audio.pause();
@@ -164,14 +198,14 @@ playBtn.addEventListener("click", playPause);
 
 async function playAudio() {
   await audio.play();
-  // audio.volume = 0.1;
+  audio.volume = 0.1;
   isPlay = true;
   duration.textContent = getTimeCodeFromNum(audio.duration);
 }
 
 async function playPlanetAudio() {
   await planetAudio.play();
-  // planetAudio.volume = 0.1;
+  planetAudio.volume = 0.1;
   isSecretPlay = true;
   planetDuration.textContent = getTimeCodeFromNum(planetAudio.duration);
 }
@@ -224,55 +258,11 @@ planetProgressBar.addEventListener("input", () => {
 });
 
 function setRound(roundData) {
-  randomObject = random(roundData);
   playBtn.classList.remove("game__pause");
 
-  console.log(randomObject.audio);
+  randomObject = random(roundData);
   audio.src = randomObject.audio;
-
-  // function playPause() {
-  //   if (!isPlay) {
-  //     playAudio();
-  //     playBtn.classList.add("game__pause");
-  //   } else {
-  //     audio.pause();
-  //     isPlay = false;
-
-  //     playBtn.classList.remove("game__pause");
-  //   }
-  // }
-
-  // playBtn.addEventListener("click", playPause);
-
-  // async function playAudio() {
-  //   await audio.play();
-  //   audio.volume = 0.1;
-  //   isPlay = true;
-  //   duration.textContent = getTimeCodeFromNum(audio.duration);
-  // }
-
-  // function getTimeCodeFromNum(num) {
-  //   let seconds = parseInt(num);
-  //   let minutes = parseInt(seconds / 60);
-  //   seconds -= minutes * 60;
-  //   const hours = parseInt(minutes / 60);
-  //   minutes -= hours * 60;
-
-  //   if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
-  //   return `${String(hours).padStart(2, 0)}:${minutes}:${String(
-  //     seconds % 60
-  //   ).padStart(2, 0)}`;
-  // }
-
-  // setInterval(() => {
-  //   progressBar.value = audio.currentTime;
-  //   current.textContent = getTimeCodeFromNum(audio.currentTime);
-  //   progressBar.max = audio.duration;
-  // }, 500);
-
-  // progressBar.addEventListener("input", () => {
-  //   audio.currentTime = progressBar.value;
-  // });
+  console.log(randomObject.audio);
 
   renderAnswersBtns(roundData);
 
@@ -284,8 +274,8 @@ function setRound(roundData) {
   );
 
   planetsVariant.forEach((planetItem) => {
-    planetItem.style.background =
-      "linear-gradient( 180deg, rgb(129 72 212) 0%, rgb(29 58 108 / 50%) 100% )";
+    planetItem.classList.remove("planet__variant_wrong");
+    planetItem.classList.remove("planet__variant_right");
   });
 }
 

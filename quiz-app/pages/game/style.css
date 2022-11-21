@@ -269,6 +269,22 @@
   border: none;
 }
 
+.planet__variant_wrong {
+  background: linear-gradient(
+    180deg,
+    rgb(155 73 73) 0%,
+    rgb(29 58 108 / 50%) 100%
+  );
+}
+
+.planet__variant_right {
+  background: linear-gradient(
+    180deg,
+    rgb(81 155 118) 0%,
+    rgb(29 58 108 / 50%) 100%
+  );
+}
+
 .planet__description {
   font-size: 22px;
   font-weight: 600;

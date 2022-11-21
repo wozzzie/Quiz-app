@@ -5,6 +5,5 @@ resultsBtn.addEventListener(
   () => (window.location.href = "../game/index.html")
 );
 
-const data = localStorage.getItem("score");
-resultsScore.innerHTML = data;
-// console.log("score", data);
+const score = localStorage.getItem("score");
+resultsScore.innerHTML = score;

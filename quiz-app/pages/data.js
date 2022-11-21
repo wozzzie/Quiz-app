@@ -5,7 +5,7 @@ const cosmosData = [
       name: "Mercury",
       astronomicalBodies: "Planet",
       description:
-        "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. It is named after the Roman god Mercurius, god of commerce, messenger of the gods, and mediator between gods and mortals.",
+        "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. It is named after the Roman god Mercurius.",
       image: "../../assets/images/Mercury.png",
       audio: "../../assets/audio/mercury.mp3",
     },
@@ -61,7 +61,7 @@ const cosmosData = [
       name: "Yuri Gagarin",
       astronomicalBodies: "Astronaut",
       description:
-        "Yuri Alekseyevich Gagarin was a Soviet pilot and cosmonaut who became the first human to journey into outer space. Travelling in the Vostok 1 capsule, Gagarin completed one orbit of Earth on 12 April 1961. By achieving this major milestone in the Space Race he became an international celebrity, and was awarded many medals and titles.",
+        "Yuri Alekseyevich Gagarin was a Soviet pilot and cosmonaut who became the first human to journey into outer space. Travelling in the Vostok 1 capsule, Gagarin completed one orbit of Earth on 12 April 1961.",
       image: "../../assets/images/yuri-gagarin.jpeg",
       audio: "../../assets/audio/gagarin.mp3",
     },
@@ -114,12 +114,12 @@ const cosmosData = [
   [
     {
       id: 1,
-      name: "Venus",
+      name: "Earth",
       astronomicalBodies: "Planet",
       description:
-        "Venus is the second planet from the Sun. It is sometimes called Earth's 'sister' or 'twin' planet as it is almost as large and has a similar composition. As an interior planet to Earth, Venus appears in Earth's sky never far from the Sun, either as morning star or evening star.",
-      image: "../../assets/images/Venus.png",
-      audio: "../../assets/audio/venera.mp3",
+        "Earth is the third planet from the Sun and the only astronomical object known to harbor life. While large volumes of water can be found throughout the Solar System, only Earth sustains liquid surface water.",
+      image: "../../assets/images/Earth.png",
+      audio: "../../assets/audio/earth.mp3",
     },
     {
       id: 2,
@@ -130,15 +130,14 @@ const cosmosData = [
       image: "../../assets/images/Mercury.png",
       audio: "../../assets/audio/mercury.mp3",
     },
-
     {
       id: 3,
-      name: "Earth",
+      name: "Venus",
       astronomicalBodies: "Planet",
       description:
-        "Earth is the third planet from the Sun and the only astronomical object known to harbor life. While large volumes of water can be found throughout the Solar System, only Earth sustains liquid surface water. About 71% of Earth's surface is made up of the ocean, dwarfing Earth's polar ice, lakes, and rivers.",
-      image: "../../assets/images/Earth.png",
-      audio: "../../assets/audio/earth.mp3",
+        "Venus is the second planet from the Sun. It is sometimes called Earth's 'sister' or 'twin' planet as it is almost as large and has a similar composition. As an interior planet to Earth, Venus appears in Earth's sky never far from the Sun, either as morning star or evening star.",
+      image: "../../assets/images/Venus.png",
+      audio: "../../assets/audio/venera.mp3",
     },
     {
       id: 4,
@@ -174,7 +173,7 @@ const cosmosData = [
       name: "The Sun",
       astronomicalBodies: "Stars",
       description:
-        "The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core. The Sun radiates this energy mainly as light, ultraviolet, and infrared radiation, and is the most important source of energy for life on Earth.",
+        "The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core. The Sun radiates this energy mainly as light, ultraviolet, and infrared radiation.",
       image: "../../assets/images/Sun.png",
       audio: "",
     },
@@ -230,7 +229,7 @@ const cosmosData = [
       name: "Satellite navigation",
       astronomicalBodies: "Vehicle",
       description:
-        "A satellite navigation or satnav system is a system that uses satellites to provide autonomous geo-spatial positioning. It allows satellite navigation devices to determine their location to high precision using time signals transmitted along a line of sight by radio from satellites. The system can be used for providing position, navigation or for tracking the position.",
+        "A satellite navigation or satnav system is a system that uses satellites to provide autonomous geo-spatial positioning. It allows satellite navigation devices to determine their location to high precision.",
       image: "../../assets/images/Satellite-navigation.png",
       audio: "",
     },
@@ -286,7 +285,7 @@ const cosmosData = [
       name: "Outer space",
       astronomicalBodies: "Cosmos",
       description:
-        "Outer space, commonly shortened to space, is the expanse that exists beyond Earth and its atmosphere and between celestial bodies. Outer space is not completely empty—it is a near perfect vacuum containing a low density of particles, predominantly a plasma of hydrogen and helium, as well as electromagnetic radiation, magnetic fields, neutrinos, dust, and cosmic rays.",
+        "Outer space, commonly shortened to space, is the expanse that exists beyond Earth and its atmosphere and between celestial bodies. Is a perfect vacuum containing a low density of particles.",
       image: "../../assets/images/outer-space.jpeg",
       audio: "",
     },

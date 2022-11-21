@@ -57,3 +57,13 @@
   text-align: center;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .results {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .results__block_two img {
+    height: 500px;
+  }
+}
