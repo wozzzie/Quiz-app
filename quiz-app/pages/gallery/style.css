@@ -56,3 +56,112 @@
   font-size: 32px;
   font-weight: 600;
 }
+
+.popup {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(37, 37, 38, 0.9);
+  transition: all 0.5s;
+}
+
+.popup__container {
+  position: relative;
+}
+
+.popup__close img {
+  position: absolute;
+  right: -34px;
+  top: -22px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.popup__inner {
+  width: 100%;
+  max-width: 265.5px;
+  pointer-events: none;
+}
+
+.popup__inner .planet__card {
+  width: 100%;
+}
+
+.planet__card {
+  height: 391px;
+
+  position: relative;
+  height: 388px;
+  background: transparent;
+  border-radius: 20px;
+  padding: 15px 15px 19px 16px;
+  flex: 1 0 auto;
+  width: 23%;
+  cursor: pointer;
+}
+
+.planet__card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.planet__avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.planet__description {
+  font-size: 16px;
+}
+
+.planet__info {
+  display: flex;
+  gap: 20px;
+}
+
+.planet__astronomical-bodies {
+  font-size: 15px;
+}
+
+.planet__review {
+  height: 100%;
+}
+
+.popup_open {
+  visibility: visible;
+  opacity: 1;
+}
