@@ -1,10 +1,17 @@
-import cosmosData from "../data.js";
+import galleryData from "../gallery.js";
 
 const galleryItem = document.querySelectorAll(".gallery__item");
 const gallery = document.querySelector(".gallery");
+const moreBtn = document.querySelectorAll(".gallery__extra");
+const popup = document.querySelector(".popup");
+const popupClose = document.querySelector(".popup__close");
+const popupImg = document.querySelector(".planet__avatar");
+const popupName = document.querySelector(".planet__name");
+const astronomicalBodies = document.querySelector(
+  ".planet__astronomical-bodies"
+);
+const popupDescription = document.querySelector(".planet__description");
 
-const cosmosDataArr = cosmosData.flat();
-const galleryArr = [];
 let galleryAudio = new Audio();
 let isGalleryPlay = false;
 
@@ -28,6 +35,35 @@ function getTimeCodeFromNum(num) {
   ).padStart(2, 0)}`;
 }
 
+function setMoreInfo() {
+  moreBtn.forEach((item) =>
+    item.addEventListener("click", (event) => {
+      galleryData.forEach((el) => {
+        if (event.target.id === el.name) {
+          popup.classList.add("popup_open");
+          popupImg.src = el.image;
+          popupName.innerHTML = el.name;
+          astronomicalBodies.innerHTML = el.astronomicalBodies;
+          popupDescription.innerHTML = el.description;
+        }
+      });
+    })
+  );
+}
+
+setMoreInfo();
+
+popupClose.addEventListener("click", () => {
+  popup.classList.remove("popup_open");
+});
+
+const outsideClick = (e) => {
+  if (e.target == popup) {
+    popup.classList.remove("popup_open");
+  }
+};
+
+window.addEventListener("click", outsideClick);
 // setInterval(() => {
 //   progressBar.value = audio.currentTime;
 //   current.textContent = getTimeCodeFromNum(audio.currentTime);
@@ -37,49 +73,3 @@ function getTimeCodeFromNum(num) {
 // progressBar.addEventListener("input", () => {
 //   audio.currentTime = progressBar.value;
 // });
-
-cosmosDataArr.forEach((el) => {
-  if (el.id === 1) {
-    galleryArr.push(el);
-  }
-});
-console.log(galleryArr);
-
-gallery.innerHTML = galleryArr.map((el) => {
-  return `
-  <div class="gallery__item">
-  <div class="item__block">
-    <img class="item__img" src="${el.image}"></img>
-    <div class="item__info">
-      <p class="item__name">${el.name}</p>
-      <p class="item__astronomical-body">${el.astronomicalBodies}</p>
-    
-    </div>
-    
-  </div>
-  <audio
-  class="item__audio"
-  controls
-  src="${el.audio}">
-</audio>
-  <p class="item__description">${el.description}</p>
-  </div>
-  `;
-});
-
-{
-  /* <div class="item__audio-play">
-<div class="item__secret-play">
-  <div class="item__play"></div>
-  <input
-    type="range"
-    class="item__progress-bar"
-    min="0"
-    max="86"
-    value="0"
-  />
-  <div class="item__currentTime"></div>
-  <div class="item__durationTime"></div>
-</div>
-</div> */
-}

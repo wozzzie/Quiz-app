@@ -3,18 +3,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   transition: 0.5s;
 }
 
-.main {
-  height: 100% !important;
-}
-
 .gallery {
+  max-width: 780px;
   margin: 35px auto;
   display: flex;
-  flex: 1 0 auto;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
@@ -27,27 +23,33 @@
     rgba(255, 255, 255, 0.25) 0.04%,
     rgba(87, 177, 255, 0) 130.08%
   );
-  border-radius: 46px;
-  padding: 20px;
-  width: 410px;
-  height: 100%;
-  min-height: 520px;
+  border-radius: 8px;
+  width: 170px;
+  height: 190px;
 }
 
-.item__block {
+.gallery__info {
+  padding: 0 5px;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
 }
 
-.item__img {
-  width: 200px;
-  height: 200px;
-  border-radius: 20px;
+.gallery__img {
+  border-radius: 8px;
 }
 
-.item__info {
-  display: flex;
-  flex-direction: column;
+.gallery__extra {
+  background: rgb(113, 136, 183);
+  border-radius: 30px;
+  padding: 0 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.gallery__extra:hover {
+  background: rgb(65, 65, 229);
 }
 
 .item__name {
@@ -55,18 +57,111 @@
   font-weight: 600;
 }
 
-.item__description {
-  margin-top: 10px;
+.popup {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(37, 37, 38, 0.9);
+  transition: all 0.5s;
 }
 
-.item__audio {
-  margin-top: 20px;
+.popup__container {
+  position: relative;
 }
 
-audio::-webkit-media-controls-panel {
-  background-color: rgb(57 23 73);
+.popup__close img {
+  position: absolute;
+  right: -34px;
+  top: -22px;
+  width: 30px;
+  cursor: pointer;
 }
 
-.footer {
-  flex: 0 0 auto;
+.popup__inner {
+  width: 100%;
+  max-width: 265.5px;
+  pointer-events: none;
+}
+
+.popup__inner .planet__card {
+  width: 100%;
+}
+
+.planet__card {
+  height: 391px;
+
+  position: relative;
+  height: 388px;
+  background: transparent;
+  border-radius: 20px;
+  padding: 15px 15px 19px 16px;
+  flex: 1 0 auto;
+  width: 23%;
+  cursor: pointer;
+}
+
+.planet__card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.planet__avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.planet__description {
+  font-size: 16px;
+}
+
+.planet__info {
+  display: flex;
+  gap: 20px;
+}
+
+.planet__astronomical-bodies {
+  font-size: 15px;
+}
+
+.planet__review {
+  height: 100%;
+}
+
+.popup_open {
+  visibility: visible;
+  opacity: 1;
 }
