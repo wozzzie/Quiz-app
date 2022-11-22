@@ -70,10 +70,12 @@ progressBar.addEventListener("input", () => {
   galleryAudio.currentTime = progressBar.value;
 });
 
+let galleryArr = galleryData.flat();
+console.log(galleryArr);
 function setMoreInfo() {
   moreBtn.forEach((item) =>
     item.addEventListener("click", (event) => {
-      galleryData.forEach((el) => {
+      galleryArr.forEach((el) => {
         if (event.target.id === el.name) {
           popup.classList.add("popup_open");
           popupImg.src = el.image;
@@ -177,3 +179,20 @@ window.addEventListener("beforeunload", () => {
 });
 
 window.addEventListener("load", getLocalStorage);
+
+const test = document.querySelector(".button_test");
+const galleryName = document.querySelectorAll(".gallery__name");
+
+let arrOfNames = Array.from(galleryName);
+
+
+function renderNames(data) {
+  data.forEach((el, index) => {
+    arrOfNames[index].innerHTML = el.name;
+  });
+}
+
+test.addEventListener("click", () => {
+  renderNames(galleryData[1])
+});
+
