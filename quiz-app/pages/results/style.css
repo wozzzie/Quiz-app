@@ -19,6 +19,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 
 .results__text {
@@ -65,5 +66,10 @@
   }
   .results__block_two img {
     height: 500px;
+  }
+
+  .results__subtext {
+    font-size: 28px;
+    text-align: center;
   }
 }

@@ -29,10 +29,6 @@ html {
   justify-content: space-between;
 }
 
-.main {
-  height: calc(100vh - 160px);
-}
-
 .list__item {
   font-size: 30px;
   font-weight: 600;
@@ -47,7 +43,7 @@ html {
 
 .list {
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 .active {
@@ -112,4 +108,24 @@ html {
   background-image: url("../assets/images/light-theme-bg.jpeg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .list__link {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .list__link {
+    font-size: 18px;
+  }
+
+  .list {
+    gap: 10px;
+  }
+
+  .list__item_logo {
+    display: none;
+  }
 }
