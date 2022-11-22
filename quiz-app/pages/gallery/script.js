@@ -11,6 +11,7 @@ const astronomicalBodies = document.querySelector(
   ".planet__astronomical-bodies"
 );
 const popupDescription = document.querySelector(".planet__description");
+const body = document.querySelector(".body");
 
 let galleryAudio = new Audio();
 let isGalleryPlay = false;
@@ -73,3 +74,54 @@ window.addEventListener("click", outsideClick);
 // progressBar.addEventListener("input", () => {
 //   audio.currentTime = progressBar.value;
 // });
+
+// Switch theme
+const switchTheme = document.querySelector(".switch-theme");
+let themeDefault = "dark";
+
+function changeTheme() {
+  switchTheme.addEventListener("click", () => {
+    if (themeDefault === "dark") {
+      body.style.background = "url(../../assets/images/light-bg-gallery.jpeg)";
+      switchTheme.style.background = "url(../../assets/icons/sun.svg)";
+      galleryItem.forEach(
+        (el) =>
+          (el.style.background =
+            "linear-gradient( 179.96deg, rgb(179 43 43 / 69%) 0.04%, rgba(87, 177, 255, 0) 130.08% )")
+      );
+      themeDefault = "light";
+    } else {
+      body.style.background = "url(../../assets/images/gallery-bg.jpeg)";
+      switchTheme.style.background = "url(../../assets/icons/moon.svg)";
+
+      themeDefault = "dark";
+    }
+    setTheme(themeDefault);
+  });
+}
+changeTheme();
+
+// Local storage
+
+function getLocalStorage() {
+  const theme = localStorage.getItem("theme");
+
+  if (theme) {
+    themeDefault = theme;
+    if (theme === "light") {
+      body.style.background = "url(../../assets/images/light-bg-gallery.jpeg)";
+    } else {
+      body.style.background = "url(../../assets/images/gallery-bg.jpeg)";
+    }
+  }
+}
+
+const setTheme = (theme) => {
+  localStorage.setItem("theme", theme);
+};
+
+window.addEventListener("beforeunload", () => {
+  setTheme(themeDefault);
+});
+
+window.addEventListener("load", getLocalStorage);

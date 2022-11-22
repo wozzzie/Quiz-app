@@ -38,9 +38,15 @@
 }
 
 .score {
-  text-align: right;
   font-size: 30px;
   font-weight: 600;
+}
+
+.score__block {
+  display: flex;
+  justify-content: right;
+  gap: 4px;
+  align-items: center;
 }
 
 .score-number {
@@ -269,6 +275,10 @@
   border: none;
 }
 
+.btn_light {
+  background: rgb(120 171 183);
+}
+
 .planet__variant_wrong {
   background: linear-gradient(
     180deg,
@@ -284,6 +294,8 @@
     rgb(29 58 108 / 50%) 100%
   );
 }
+
+
 
 .planet__description {
   font-size: 22px;

@@ -22,44 +22,67 @@
   <body class="body">
     <header class="header">
       <div class="container">
-        <nav class="nav">
-          <ul class="list">
-            <li class="list__item">
-              <a href="../start/index.html">
-                <img
-                  class="list__item_logo"
-                  src="../../assets/favicon/favicon.ico"
-                  alt="logo"
-              /></a>
-            </li>
-            <li class="list__item">
-              <a class="list__link" href="../start/index.html">Start</a>
-            </li>
-            <li class="list__item">
-              <a class="list__link active" href="index.html">Game</a>
-            </li>
-            <li class="list__item">
-              <a class="list__link" href="../results/index.html">Results</a>
-            </li>
-            <li class="list__item">
-              <a class="list__link" href="../gallery/index.html">Gallery</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="header__container">
+          <nav class="nav">
+            <ul class="list">
+              <li class="list__item">
+                <a href="../start/index.html">
+                  <img
+                    class="list__item_logo"
+                    src="../../assets/favicon/favicon.ico"
+                    alt="logo"
+                /></a>
+              </li>
+              <li class="list__item">
+                <a
+                  class="list__link"
+                  href="../start/index.html"
+                  data-i18="start"
+                  >Start</a
+                >
+              </li>
+              <li class="list__item">
+                <a class="list__link active" href="index.html" data-i18="game"
+                  >Game</a
+                >
+              </li>
+              <li class="list__item">
+                <a
+                  class="list__link"
+                  href="../results/index.html"
+                  data-i18="results"
+                  >Results</a
+                >
+              </li>
+              <li class="list__item">
+                <a
+                  class="list__link"
+                  href="../gallery/index.html"
+                  data-i18="gallery"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="switch-theme"></div>
+        </div>
       </div>
     </header>
     <main class="main">
       <div class="container">
         <div class="questions-score">
-          <div class="score">Score: <span class="score-number">0</span></div>
+          <div class="score__block">
+            <p class="score" data-i18="score">Score:</p>
+            <span class="score-number">0</span>
+          </div>
 
           <div class="questions">
-            <div class="questions__block">Planets 1.0</div>
-            <div class="questions__block">Astronauts</div>
-            <div class="questions__block">Planets 2.0</div>
-            <div class="questions__block">Stars</div>
-            <div class="questions__block">Vehicle</div>
-            <div class="questions__block">Cosmos</div>
+            <div class="questions__block" data-i18="planets_1">Planets 1.0</div>
+            <div class="questions__block" data-i18="astronauts">Astronauts</div>
+            <div class="questions__block" data-i18="planets_2">Planets 2.0</div>
+            <div class="questions__block" data-i18="stars">Stars</div>
+            <div class="questions__block" data-i18="vehicle">Vehicle</div>
+            <div class="questions__block" data-i18="cosmos">Cosmos</div>
           </div>
         </div>
         <div class="game">
@@ -82,12 +105,12 @@
               <div class="game__durationTime"></div>
             </div>
           </div>
-          <button class="game__button">Next round</button>
+          <button class="game__button" data-i18="next_round">Next round</button>
         </div>
         <div class="planet">
           <div class="planet__block">
             <div class="planet__description">
-              <div class="planet__description-choose">
+              <div class="planet__description-choose" data-i18="listen">
                 Listen to the player. Select a planet from the list.
               </div>
               <div class="planet__description-img"></div>

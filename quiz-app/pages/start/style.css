@@ -1,10 +1,5 @@
 .body {
-  background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-    ),
-    url("../../assets/images/bg.jpeg");
+  background-image: url("../../assets/images/bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
