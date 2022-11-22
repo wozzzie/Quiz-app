@@ -6,7 +6,7 @@ const galleryData = [
     description:
       "The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core. The Sun radiates this energy mainly as light, ultraviolet, and infrared radiation.",
     image: "../../assets/images/Sun.png",
-    audio: "",
+    audio: "../../assets/audio/earth.mp3",
   },
   {
     id: 2,
@@ -69,7 +69,7 @@ const galleryData = [
     description:
       "Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus, who, according to Greek mythology, was the great-grandfather of Ares (Mars), grandfather of Zeus (Jupiter) and father of Cronus (Saturn). It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.",
     image: "../../assets/images/Uranus.png",
-    audio: "",
+    audio: "../../assets/audio/uran.mp3",
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ const galleryData = [
     description:
       "Neptune is the eighth planet from the Sun and the farthest known solar planet. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, and slightly more massive than its near-twin Uranus. It is referred to as one of the solar system's two ice giant planets.",
     image: "../../assets/images/Neptune.png",
-    audio: "",
+    audio: "../../assets/audio/neptune.mp3",
   },
   {
     id: 10,
@@ -87,7 +87,7 @@ const galleryData = [
     description:
       "Pluto is a dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune. It is the ninth-largest and tenth-most-massive known object to directly orbit the Sun. Pluto is made primarily of ice and rock and is much smaller than the inner planets.",
     image: "../../assets/images/pluto.png",
-    audio: "",
+    audio: "../../assets/audio/pluto.mp3",
   },
 ];
 

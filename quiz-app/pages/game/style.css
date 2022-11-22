@@ -5,12 +5,10 @@
       rgba(0, 0, 0, 0.3)
     ),
     url("../../assets/images/moon.jpeg");
-  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   transition: 0.5s;
-  overflow: hidden;
 }
 
 .questions {
@@ -38,9 +36,15 @@
 }
 
 .score {
-  text-align: right;
   font-size: 30px;
   font-weight: 600;
+}
+
+.score__block {
+  display: flex;
+  justify-content: right;
+  gap: 4px;
+  align-items: center;
 }
 
 .score-number {
@@ -269,6 +273,10 @@
   border: none;
 }
 
+.btn_light {
+  background: rgb(120 171 183);
+}
+
 .planet__variant_wrong {
   background: linear-gradient(
     180deg,
@@ -302,17 +310,52 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .game {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-}
 
-@media (max-width: 768px) {
   .planet {
     display: flex;
     flex-direction: column;
+  }
+
+  .questions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .planet__description-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .planet__description-text {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .planet__description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .planet__description-choose {
+    width: 237px;
+  }
+
+  .planet__info {
+    margin-left: 0px;
+  }
+
+  .game__progress-bar,
+  .planet__progress-bar {
+    width: 133px;
   }
 }
