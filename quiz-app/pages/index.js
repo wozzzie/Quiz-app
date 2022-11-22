@@ -342,9 +342,20 @@ function getLocalStorage() {
     themeDefault = theme;
     if (theme === "light") {
       body.classList.add("ligth-theme");
+      questionsBlock[0].style.backgroundColor = "rgb(120 171 183)";
+      nextRound.classList.add("btn_light");
+      planetsVariant.forEach((el) => el.classList.add("btn_light"));
+      switchTheme.style.background = "url(../../assets/icons/sun.svg)";
+      planet.style.backgroundImage =
+        "url(../../assets/images/secret-planet-light.png)";
     } else {
       body.classList.remove("ligth-theme");
-    }
+      questionsBlock[0].style.backgroundColor = "rgb(84 73 163)";
+      planetsVariant.forEach((el) => el.classList.remove("btn_light"));
+      nextRound.classList.remove("btn_light");
+      switchTheme.style.background = "url(../../assets/icons/moon.svg)";
+      planet.style.backgroundImage =
+        "url(../../assets/images/secret-planet.png)";    }
   }
 }
 

@@ -54,8 +54,13 @@ function getLocalStorage() {
     if (theme === "light") {
       body.style.backgroundImage =
         "url(../../assets/images/results-light-theme.jpeg)";
+      switchTheme.style.backgroundImage = "url(../../assets/icons/sun.svg)";
+      resultsBtn.style.background = "rgb(168 180 255";
     } else {
       body.style.backgroundImage = "url(../../assets/images/mars.jpeg)";
+      switchTheme.style.backgroundImage = "url(../../assets/icons/moon.svg)";
+      resultsBtn.style.background =
+        "linear-gradient( 180deg,rgb(130 21 36) 0%, rgb(31 38 49 / 50%) 100%)";
     }
   }
 }
