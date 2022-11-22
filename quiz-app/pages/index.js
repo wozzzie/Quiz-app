@@ -80,7 +80,6 @@ renderAnswersBtns(firstRound);
 secretPlay.addEventListener("click", () => {
   playBtn.classList.remove("game__pause");
 
-  console.log("isSecretPlay", isSecretPlay);
   if (!isSecretPlay) {
     audio.pause();
     isPlay = false;
@@ -109,7 +108,6 @@ function clickAnswerBtn(event) {
       scoreOfGame -= 1;
     }
 
-    console.log(attempt);
     if (event.target.innerHTML === randomObject.name) {
       nextRound.disabled = false;
       nextRound.classList.remove("game__button_disabled");
@@ -130,12 +128,10 @@ function clickAnswerBtn(event) {
         window.location.href = "../results/index.html";
       }
 
-      console.log("YEEYEYYEYEY", win);
       planetName.innerHTML = randomObject.name;
       planet.style.backgroundImage = `url(${randomObject.image})`;
       event.target.classList.add("planet__variant_right");
     } else {
-      console.log("NO!", win);
 
       if (!win) {
         ++attempt;
@@ -144,7 +140,6 @@ function clickAnswerBtn(event) {
       }
     }
   }
-  console.log("attempt", attempt);
 
   let cosmosArr = cosmosData[round].flat();
 
@@ -156,9 +151,7 @@ function clickAnswerBtn(event) {
       secretPlay.classList.remove("game__pause");
 
       planetAudio.src = el.audio;
-      console.log(secretPlay);
 
-      console.log(audio.src);
       planetDescription.innerText = "";
       planetDescriptionImg.style.backgroundImage = `url(${el.image})`;
       planetDescriptionName.innerHTML = el.name;
@@ -170,7 +163,6 @@ function clickAnswerBtn(event) {
 }
 
 function playPause() {
-  console.log("audioPlay", isPlay);
   if (!isPlay) {
     planetAudio.pause();
     isSecretPlay = false;
@@ -251,7 +243,6 @@ function setRound(roundData) {
 
   randomObject = random(roundData);
   audio.src = randomObject.audio;
-  console.log(randomObject.audio);
 
   renderAnswersBtns(roundData);
 
@@ -273,7 +264,6 @@ function setGame() {
 
   const moveTo = (event, delta) => {
     const questions = [...questionsBlock];
-    console.log("round", round);
     questions.forEach(
       (el) =>
         (el.style.background =
@@ -309,7 +299,6 @@ function setGame() {
       planetDescriptionAstronomicalBodies.innerHTML = "";
       planetDescriptionText.innerText = "";
     }
-    console.log("randomObject", randomObject);
   });
 }
 
