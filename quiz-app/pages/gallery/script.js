@@ -82,8 +82,6 @@ function setMoreInfo() {
           popupDescription.innerHTML = el.description;
 
           galleryAudio.src = el.audio;
-          console.log(galleryAudio.src);
-          console.log(popupName.innerHTML);
         }
       });
     })
