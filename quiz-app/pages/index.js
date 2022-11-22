@@ -189,14 +189,14 @@ playBtn.addEventListener("click", playPause);
 
 async function playAudio() {
   await audio.play();
-  audio.volume = 0.1;
+  // audio.volume = 0.1;
   isPlay = true;
   duration.textContent = getTimeCodeFromNum(audio.duration);
 }
 
 async function playPlanetAudio() {
   await planetAudio.play();
-  planetAudio.volume = 0.1;
+  // planetAudio.volume = 0.1;
   isSecretPlay = true;
   planetDuration.textContent = getTimeCodeFromNum(planetAudio.duration);
 }

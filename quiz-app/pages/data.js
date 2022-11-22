@@ -223,7 +223,7 @@ const cosmosData = [
       description:
         "Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus, who, according to Greek mythology, was the great-grandfather of Ares (Mars), grandfather of Zeus (Jupiter) and father of Cronus (Saturn). It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.",
       image: "../../assets/images/Uranus.png",
-      audio: "",
+      audio: "../../assets/audio/uran.mp3",
     },
     {
       id: 6,
@@ -236,7 +236,7 @@ const cosmosData = [
       description:
         "Neptune is the eighth planet from the Sun and the farthest known solar planet. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, and slightly more massive than its near-twin Uranus. It is referred to as one of the solar system's two ice giant planets.",
       image: "../../assets/images/Neptune.png",
-      audio: "",
+      audio: "../../assets/audio/neptune.mp3",
     },
   ],
   [
@@ -251,7 +251,7 @@ const cosmosData = [
       description:
         "The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core. The Sun radiates this energy mainly as light, ultraviolet, and infrared radiation.",
       image: "../../assets/images/Sun.png",
-      audio: "",
+      audio: "../../assets/audio/sun.mp3",
     },
     {
       id: 2,
@@ -264,7 +264,7 @@ const cosmosData = [
       description:
         "A pulsar is a highly magnetized rotating neutron star that emits beams of electromagnetic radiation out of its magnetic poles. This radiation can be observed only when a beam of emission is pointing toward Earth (similar to the way a lighthouse can be seen only when the light is pointed in the direction of an observer), and is responsible for the pulsed appearance of emission.",
       image: "../../assets/images/vela-pulsar.jpeg",
-      audio: "",
+      audio: "../../assets/audio/pulsar-vela.mp3",
     },
     {
       id: 3,
@@ -277,7 +277,7 @@ const cosmosData = [
       description:
         "Iota Draconis, also named Edasich is a star in the northern circumpolar constellation of Draco. A visually unremarkable star of apparent magnitude 3.3, in 2002 it was discovered to have a planet orbiting it. From parallax measurements, this star is located at a distance of about 101.2 light-years from the Sun.",
       image: "../../assets/images/Iota-draconis.jpeg",
-      audio: "",
+      audio: "../../assets/audio/iota.mp3",
     },
     {
       id: 4,
@@ -290,7 +290,7 @@ const cosmosData = [
       description:
         "A pulsar is a highly magnetized rotating neutron star that emits beams of electromagnetic radiation out of its magnetic poles. This radiation can be observed only when a beam of emission is pointing toward Earth (similar to the way a lighthouse can be seen only when the light is pointed in the direction of an observer), and is responsible for the pulsed appearance of emission.",
       image: "../../assets/images/crab-pulsar.jpeg",
-      audio: "",
+      audio: "../../assets/audio/pulsar-crab.mp3",
     },
     {
       id: 5,
@@ -303,7 +303,7 @@ const cosmosData = [
       description:
         "A magnetar is a type of neutron star with an extremely powerful magnetic field. The magnetic-field decay powers the emission of high-energy electromagnetic radiation, particularly X-rays and gamma rays.",
       image: "../../assets/images/magnetar.jpeg",
-      audio: "",
+      audio: "../../assets/audio/magnetar.mp3",
     },
     {
       id: 6,
@@ -316,7 +316,7 @@ const cosmosData = [
       description:
         "42 Draconis (abbreviated 42 Dra), formally named Fafnir is a 5th magnitude K-type giant star located approximately 315 light years away in the constellation of Draco. As of 2009, an extrasolar planet is thought to be orbiting the star.",
       image: "../../assets/images/draconis-42.jpeg",
-      audio: "",
+      audio: "../../assets/audio/dracon.mp3",
     },
   ],
   [
@@ -331,7 +331,7 @@ const cosmosData = [
       description:
         "A satellite navigation or satnav system is a system that uses satellites to provide autonomous geo-spatial positioning. It allows satellite navigation devices to determine their location to high precision.",
       image: "../../assets/images/Satellite-navigation.png",
-      audio: "",
+      audio: "../../assets/audio/sputnik.mp3",
     },
     {
       id: 2,
@@ -344,7 +344,7 @@ const cosmosData = [
       description:
         "A launch vehicle or carrier rocket is a rocket designed to carry a payload (spacecraft or satellites) from the Earth's surface to outer space. Most launch vehicles operate from a launch pads, supported by a launch control center and systems such as vehicle assembly and fueling.",
       image: "../../assets/images/Launch-vehicle.png",
-      audio: "",
+      audio: "../../assets/audio/rocket.mp3",
     },
     {
       id: 3,
@@ -357,7 +357,7 @@ const cosmosData = [
       description:
         "Sonar is a technique that uses sound propagation to navigate, measure distances (ranging), communicate with or detect objects on or under the surface of the water, such as other vessels. Two types of technology share the name 'sonar': passive sonar is essentially listening for the sound made by vessels; active sonar is emitting pulses of sounds and listening for echoes",
       image: "../../assets/images/sonar.jpeg",
-      audio: "",
+      audio: "../../assets/audio/sonar.mp3",
     },
     {
       id: 4,
@@ -370,7 +370,7 @@ const cosmosData = [
       description:
         "The Space Shuttle is a retired, partially reusable low Earth orbital spacecraft system operated from 1981 to 2011 by the U.S. National Aeronautics and Space Administration (NASA) as part of the Space Shuttle program.",
       image: "../../assets/images/Space-Shuttle.png",
-      audio: "",
+      audio: "../../assets/audio/shuttle.mp3",
     },
     {
       id: 5,
@@ -383,7 +383,7 @@ const cosmosData = [
       description:
         "A spaceplane is a vehicle that can fly and glide like an aircraft in Earth's atmosphere and maneuver like a spacecraft in outer space. To do so, spaceplanes must incorporate features of both aircraft and spacecraft. Orbital spaceplanes tend to be more similar to conventional spacecraft.",
       image: "../../assets/images/space-plane.jpeg",
-      audio: "",
+      audio: "../../assets/audio/spaceplane.mp3",
     },
     {
       id: 6,
@@ -396,7 +396,7 @@ const cosmosData = [
       description:
         "The International Space Station (ISS) is the largest modular space station currently in low Earth orbit. It is a multinational collaborative project involving five participating space agencies: NASA (United States), Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada).",
       image: "../../assets/images/International-Space-Station.jpeg",
-      audio: "",
+      audio: "../../assets/audio/station.mp3",
     },
   ],
   [
@@ -411,7 +411,7 @@ const cosmosData = [
       description:
         "Outer space, commonly shortened to space, is the expanse that exists beyond Earth and its atmosphere and between celestial bodies. Is a perfect vacuum containing a low density of particles.",
       image: "../../assets/images/outer-space.jpeg",
-      audio: "",
+      audio: "../../assets/audio/outer-space.mp3",
     },
     {
       id: 2,
@@ -424,7 +424,7 @@ const cosmosData = [
       description:
         "A comet is an icy, small Solar System body that, when passing close to the Sun, warms and begins to release gases, a process that is called outgassing. This produces a visible atmosphere or coma, and sometimes also a tail. These phenomena are due to the effects of solar radiation and the solar wind acting upon the nucleus of the comet.",
       image: "../../assets/images/comet.png",
-      audio: "",
+      audio: "../../assets/audio/comet.mp3",
     },
     {
       id: 3,
@@ -437,7 +437,7 @@ const cosmosData = [
       description:
         "A black hole is a region of spacetime where gravity is so strong that nothing – no particles or even electromagnetic radiation such as light – can escape from it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of no escape is called the event horizon.",
       image: "../../assets/images/black-hole.jpeg",
-      audio: "",
+      audio: "../../assets/audio/hole.mp3",
     },
     {
       id: 4,
@@ -450,7 +450,7 @@ const cosmosData = [
       description:
         "A geomagnetic storm, also known as a magnetic storm, is a temporary disturbance of the Earth's magnetosphere caused by a solar wind shock wave and/or cloud of magnetic field that interacts with the Earth's magnetic field.",
       image: "../../assets/images/storm.jpeg",
-      audio: "",
+      audio: "../../assets/audio/geo.mp3",
     },
     {
       id: 5,
@@ -463,7 +463,7 @@ const cosmosData = [
       description:
         "An atmosphere is a layer of gas or layers of gases that envelop a planet, and is held in place by the gravity of the planetary body. A planet retains an atmosphere when the gravity is great and the temperature of the atmosphere is low.",
       image: "../../assets/images/atmo.jpeg",
-      audio: "",
+      audio: "../../assets/audio/atmo.mp3",
     },
     {
       id: 6,
@@ -476,7 +476,7 @@ const cosmosData = [
       description:
         "In astronomy and planetary science, a magnetosphere is a region of space surrounding an astronomical object in which charged particles are affected by that object's magnetic field. It is created by a celestial body with an active interior dynamo.",
       image: "../../assets/images/magni.png",
-      audio: "",
+      audio: "../../assets/audio/magni.mp3",
     },
   ],
 ];

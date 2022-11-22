@@ -82,7 +82,7 @@ let themeDefault = "dark";
 function changeTheme() {
   switchTheme.addEventListener("click", () => {
     if (themeDefault === "dark") {
-      body.style.background = "url(../../assets/images/light-bg-gallery.jpeg)";
+      body.style.backgroundImage = "url(../../assets/images/light-bg-gallery.jpeg)";
       switchTheme.style.background = "url(../../assets/icons/sun.svg)";
       galleryItem.forEach(
         (el) =>
@@ -91,7 +91,7 @@ function changeTheme() {
       );
       themeDefault = "light";
     } else {
-      body.style.background = "url(../../assets/images/gallery-bg.jpeg)";
+      body.style.backgroundImage = "url(../../assets/images/gallery-bg.jpeg)";
       switchTheme.style.background = "url(../../assets/icons/moon.svg)";
 
       themeDefault = "dark";
@@ -109,9 +109,9 @@ function getLocalStorage() {
   if (theme) {
     themeDefault = theme;
     if (theme === "light") {
-      body.style.background = "url(../../assets/images/light-bg-gallery.jpeg)";
+      body.style.backgroundImage = "url(../../assets/images/light-bg-gallery.jpeg)";
     } else {
-      body.style.background = "url(../../assets/images/gallery-bg.jpeg)";
+      body.style.backgroundImage = "url(../../assets/images/gallery-bg.jpeg)";
     }
   }
 }

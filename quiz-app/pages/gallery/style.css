@@ -2,11 +2,11 @@
   background-image: url("../../assets/images/gallery-bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   transition: 0.5s;
 }
-
 
 .gallery {
   max-width: 780px;
