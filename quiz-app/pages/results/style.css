@@ -13,6 +13,10 @@
   overflow: hidden;
 }
 
+.main {
+  height: calc(100vh - 160px);
+}
+
 .results {
   margin-top: 30px;
   display: flex;

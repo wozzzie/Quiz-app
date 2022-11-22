@@ -128,7 +128,11 @@ function changeTheme() {
     } else {
       body.style.backgroundImage = "url(../../assets/images/gallery-bg.jpeg)";
       switchTheme.style.background = "url(../../assets/icons/moon.svg)";
-
+      galleryItem.forEach(
+        (el) =>
+          (el.style.background =
+            "linear-gradient(179.96deg, rgba(255, 255, 255, 0.25) 0.04%, rgba(87, 177, 255, 0) 130.08%);")
+      );
       themeDefault = "dark";
     }
     setTheme(themeDefault);
@@ -146,8 +150,20 @@ function getLocalStorage() {
     if (theme === "light") {
       body.style.backgroundImage =
         "url(../../assets/images/light-bg-gallery.jpeg)";
+      switchTheme.style.background = "url(../../assets/icons/sun.svg)";
+      galleryItem.forEach(
+        (el) =>
+          (el.style.background =
+            "linear-gradient(179.96deg, rgba(179, 43, 43, 0.69) 0.04%, rgb(48 50 73 / 98%) 130.08%)")
+      );
     } else {
       body.style.backgroundImage = "url(../../assets/images/gallery-bg.jpeg)";
+      switchTheme.style.background = "url(../../assets/icons/moon.svg)";
+      galleryItem.forEach(
+        (el) =>
+          (el.style.background =
+            "linear-gradient(179.96deg, rgba(255, 255, 255, 0.25) 0.04%, rgba(87, 177, 255, 0) 130.08%);")
+      );
     }
   }
 }

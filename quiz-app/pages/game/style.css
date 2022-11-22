@@ -11,6 +11,10 @@
   transition: 0.5s;
 }
 
+.main {
+  height: calc(100vh - 160px);
+}
+
 .questions {
   margin-top: 30px;
   width: 100%;
@@ -322,8 +326,16 @@
     flex-direction: column;
   }
 
+  .planet__block {
+    height: 100%;
+  }
+
   .questions {
     flex-direction: column;
+  }
+
+  .main {
+    height: 100%;
   }
 }
 

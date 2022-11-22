@@ -2,8 +2,12 @@
   background-image: url("../../assets/images/gallery-bg.jpeg");
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   transition: 0.5s;
+}
+
+.main {
+  height: calc(100vh - 160px);
 }
 
 .gallery {
@@ -243,4 +247,10 @@
   position: absolute;
   right: 0;
   top: 35px;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    height: 100%;
+  }
 }
