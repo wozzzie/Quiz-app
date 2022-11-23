@@ -148,7 +148,7 @@ function clickAnswerBtn(event) {
       secretPlay.classList.remove("game__pause");
 
       planetAudio.src = el.audio;
-
+      isSecretPlay = false
       planetDescription.innerText = "";
       planetDescriptionImg.style.backgroundImage = `url(${el.image})`;
       planetDescriptionName.innerHTML = el.name;
