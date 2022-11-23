@@ -249,6 +249,14 @@
   top: 35px;
 }
 
+.red-bg {
+  background: linear-gradient(
+    179.96deg,
+    rgba(179, 43, 43, 0.69) 0.04%,
+    rgb(48 50 73 / 98%) 130.08%
+  );
+}
+
 @media (max-width: 400px) {
   .main {
     height: 100%;
