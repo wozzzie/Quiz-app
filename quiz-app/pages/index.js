@@ -6,13 +6,13 @@ let themeDefault = "dark";
 function changeTheme() {
   switchTheme.addEventListener("click", () => {
     if (themeDefault === "dark") {
-      if (window.location.pathname === "/quiz-app/pages/results/index.html") {
+      if (window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/results/index.html") {
         const resultsBtn = document.querySelector(".results__btn");
         body.style.backgroundImage =
           "url(../../assets/images/results-light-theme.jpeg)";
         resultsBtn.style.background = "rgb(168 180 255";
       } else if (
-        window.location.pathname === "/quiz-app/pages/game/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/game/index.html"
       ) {
         const questionsBlock = document.querySelectorAll(".questions__block");
         const nextRound = document.querySelector(".game__button");
@@ -27,12 +27,12 @@ function changeTheme() {
         planet.style.backgroundImage =
           "url(../../assets/images/secret-planet-light.png)";
       } else if (
-        window.location.pathname === "/quiz-app/pages/start/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/start/index.html"
       ) {
         body.style.backgroundImage =
           "url(../../assets/images/start-light-theme.jpeg)";
       } else if (
-        window.location.pathname === "/quiz-app/pages/gallery/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/gallery/index.html"
       ) {
         const galleryItem = document.querySelectorAll(".gallery__item");
 
@@ -49,14 +49,14 @@ function changeTheme() {
 
       themeDefault = "light";
     } else {
-      if (window.location.pathname === "/quiz-app/pages/results/index.html") {
+      if (window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/results/index.html") {
         const resultsBtn = document.querySelector(".results__btn");
         body.style.backgroundImage = "url(../../assets/images/mars.jpeg)";
 
         resultsBtn.style.background =
           "linear-gradient( 180deg,rgb(130 21 36) 0%, rgb(31 38 49 / 50%) 100%)";
       } else if (
-        window.location.pathname === "/quiz-app/pages/game/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/game/index.html"
       ) {
         const questionsBlock = document.querySelectorAll(".questions__block");
         const nextRound = document.querySelector(".game__button");
@@ -70,11 +70,11 @@ function changeTheme() {
         planet.style.backgroundImage =
           "url(../../assets/images/secret-planet.png)";
       } else if (
-        window.location.pathname === "/quiz-app/pages/start/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/start/index.html"
       ) {
         body.style.backgroundImage = "url(../../assets/images/bg.jpeg)";
       } else if (
-        window.location.pathname === "/quiz-app/pages/gallery/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/gallery/index.html"
       ) {
         const galleryItem = document.querySelectorAll(".gallery__item");
 
@@ -103,13 +103,13 @@ function getLocalStorage() {
   if (theme) {
     themeDefault = theme;
     if (theme === "light") {
-      if (window.location.pathname === "/quiz-app/pages/results/index.html") {
+      if (window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/results/index.html") {
         const resultsBtn = document.querySelector(".results__btn");
         body.style.backgroundImage =
           "url(../../assets/images/results-light-theme.jpeg)";
         resultsBtn.style.background = "rgb(168 180 255";
       } else if (
-        window.location.pathname === "/quiz-app/pages/game/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/game/index.html"
       ) {
         const questionsBlock = document.querySelectorAll(".questions__block");
         const nextRound = document.querySelector(".game__button");
@@ -124,12 +124,12 @@ function getLocalStorage() {
         planet.style.backgroundImage =
           "url(../../assets/images/secret-planet-light.png)";
       } else if (
-        window.location.pathname === "/quiz-app/pages/start/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/start/index.html"
       ) {
         body.style.backgroundImage =
           "url(../../assets/images/start-light-theme.jpeg)";
       } else if (
-        window.location.pathname === "/quiz-app/pages/gallery/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/gallery/index.html"
       ) {
         const galleryItem = document.querySelectorAll(".gallery__item");
 
@@ -143,14 +143,14 @@ function getLocalStorage() {
       }
       switchTheme.style.background = "url(../../assets/icons/moon.svg)";
     } else {
-      if (window.location.pathname === "/quiz-app/pages/results/index.html") {
+      if (window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/results/index.html") {
         const resultsBtn = document.querySelector(".results__btn");
         body.style.backgroundImage = "url(../../assets/images/mars.jpeg)";
 
         resultsBtn.style.background =
           "linear-gradient( 180deg,rgb(130 21 36) 0%, rgb(31 38 49 / 50%) 100%)";
       } else if (
-        window.location.pathname === "/quiz-app/pages/game/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/game/index.html"
       ) {
         const questionsBlock = document.querySelectorAll(".questions__block");
         const nextRound = document.querySelector(".game__button");
@@ -164,11 +164,11 @@ function getLocalStorage() {
         planet.style.backgroundImage =
           "url(../../assets/images/secret-planet.png)";
       } else if (
-        window.location.pathname === "/quiz-app/pages/start/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/start/index.html"
       ) {
         body.style.backgroundImage = "url(../../assets/images/bg.jpeg)";
       } else if (
-        window.location.pathname === "/quiz-app/pages/gallery/index.html"
+        window.location.pathname === "https://wozzzie.github.io/Quiz-app/quiz-app/pages/gallery/index.html"
       ) {
         const galleryItem = document.querySelectorAll(".gallery__item");
 

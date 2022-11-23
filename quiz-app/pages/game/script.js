@@ -38,7 +38,6 @@ const playBtn = document.querySelector(".game__play"),
   planetDuration = document.querySelector(".planet__durationTime"),
   planetProgressBar = document.querySelector(".planet__progress-bar");
 
-
 nextRound.disabled = true;
 nextRound.classList.add("game__button_disabled");
 audioPlay.classList.add("hidden");
@@ -56,7 +55,6 @@ let isSecretPlay = false;
 let audio = new Audio();
 let planetAudio = new Audio();
 let audioBtn = new Audio();
-
 
 function random(data) {
   return data[Math.floor(Math.random() * data.length)];
@@ -113,6 +111,12 @@ function clickAnswerBtn(event) {
       score = scoreOfGame;
       event.target.setAttribute("id", "winningItem");
 
+      audio.pause();
+      isPlay = false;
+      duration.textContent = getTimeCodeFromNum(audio.duration);
+      audio.currentTime = 0;
+      playBtn.classList.remove("game__pause");
+
       changeAudio("right");
 
       scoreNumber.innerHTML = score;
@@ -129,7 +133,6 @@ function clickAnswerBtn(event) {
       planet.style.backgroundImage = `url(${randomObject.image})`;
       event.target.classList.add("planet__variant_right");
     } else {
-
       if (!win) {
         ++attempt;
         event.target.classList.add("planet__variant_wrong");
@@ -148,7 +151,7 @@ function clickAnswerBtn(event) {
       secretPlay.classList.remove("game__pause");
 
       planetAudio.src = el.audio;
-      isSecretPlay = false
+      isSecretPlay = false;
       planetDescription.innerText = "";
       planetDescriptionImg.style.backgroundImage = `url(${el.image})`;
       planetDescriptionName.innerHTML = el.name;
@@ -162,6 +165,7 @@ function clickAnswerBtn(event) {
 function playPause() {
   if (!isPlay) {
     planetAudio.pause();
+
     isSecretPlay = false;
     playAudio();
     secretPlay.classList.remove("game__pause");
