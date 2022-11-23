@@ -5,12 +5,10 @@
       rgba(0, 0, 0, 0.3)
     ),
     url("../../assets/images/mars.jpeg");
-  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   transition: 0.5s;
-  overflow: hidden;
 }
 
 .main {
@@ -77,3 +75,5 @@
     text-align: center;
   }
 }
+
+
