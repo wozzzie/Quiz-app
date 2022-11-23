@@ -1,4 +1,5 @@
 import galleryData from "../gallery.js";
+const body = document.querySelector(".body");
 
 const galleryItem = document.querySelectorAll(".gallery__item");
 const gallery = document.querySelector(".gallery");
@@ -11,7 +12,6 @@ const astronomicalBodies = document.querySelector(
   ".planet__astronomical-bodies"
 );
 const popupDescription = document.querySelector(".planet__description");
-const body = document.querySelector(".body");
 
 const playBtn = document.querySelector(".game__play"),
   planetName = document.querySelector(".game__secret-planet"),
@@ -71,7 +71,6 @@ progressBar.addEventListener("input", () => {
 });
 
 let galleryArr = galleryData.flat();
-console.log(galleryArr);
 function setMoreInfo() {
   moreBtn.forEach((item) =>
     item.addEventListener("click", (event) => {
@@ -109,90 +108,3 @@ const outsideClick = (e) => {
 };
 
 window.addEventListener("click", outsideClick);
-
-// Switch theme
-const switchTheme = document.querySelector(".switch-theme");
-let themeDefault = "dark";
-
-function changeTheme() {
-  switchTheme.addEventListener("click", () => {
-    if (themeDefault === "dark") {
-      body.style.backgroundImage =
-        "url(../../assets/images/light-bg-gallery.jpeg)";
-      switchTheme.style.background = "url(../../assets/icons/sun.svg)";
-      galleryItem.forEach(
-        (el) =>
-          (el.style.background =
-            "linear-gradient(179.96deg, rgba(179, 43, 43, 0.69) 0.04%, rgb(48 50 73 / 98%) 130.08%)")
-      );
-
-      themeDefault = "light";
-    } else {
-      body.style.backgroundImage = "url(../../assets/images/gallery-bg.jpeg)";
-      switchTheme.style.background = "url(../../assets/icons/moon.svg)";
-      galleryItem.forEach(
-        (el) =>
-          (el.style.background =
-            "linear-gradient(179.96deg, rgba(255, 255, 255, 0.25) 0.04%, rgba(87, 177, 255, 0) 130.08%);")
-      );
-      themeDefault = "dark";
-    }
-    setTheme(themeDefault);
-  });
-}
-changeTheme();
-
-// Local storage
-
-function getLocalStorage() {
-  const theme = localStorage.getItem("theme");
-
-  if (theme) {
-    themeDefault = theme;
-    if (theme === "light") {
-      body.style.backgroundImage =
-        "url(../../assets/images/light-bg-gallery.jpeg)";
-      switchTheme.style.background = "url(../../assets/icons/sun.svg)";
-      galleryItem.forEach(
-        (el) =>
-          (el.style.background =
-            "linear-gradient(179.96deg, rgba(179, 43, 43, 0.69) 0.04%, rgb(48 50 73 / 98%) 130.08%)")
-      );
-    } else {
-      body.style.backgroundImage = "url(../../assets/images/gallery-bg.jpeg)";
-      switchTheme.style.background = "url(../../assets/icons/moon.svg)";
-      galleryItem.forEach(
-        (el) =>
-          (el.style.background =
-            "linear-gradient(179.96deg, rgba(255, 255, 255, 0.25) 0.04%, rgba(87, 177, 255, 0) 130.08%);")
-      );
-    }
-  }
-}
-
-const setTheme = (theme) => {
-  localStorage.setItem("theme", theme);
-};
-
-window.addEventListener("beforeunload", () => {
-  setTheme(themeDefault);
-});
-
-window.addEventListener("load", getLocalStorage);
-
-const test = document.querySelector(".button_test");
-const galleryName = document.querySelectorAll(".gallery__name");
-
-let arrOfNames = Array.from(galleryName);
-
-
-function renderNames(data) {
-  data.forEach((el, index) => {
-    arrOfNames[index].innerHTML = el.name;
-  });
-}
-
-test.addEventListener("click", () => {
-  renderNames(galleryData[1])
-});
-
