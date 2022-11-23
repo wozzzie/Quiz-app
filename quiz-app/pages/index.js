@@ -1,5 +1,6 @@
 const switchTheme = document.querySelector(".switch-theme");
-const body = document.querySelector('.body')
+const body = document.querySelector(".body");
+
 let themeDefault = "dark";
 
 function changeTheme() {
@@ -18,6 +19,8 @@ function changeTheme() {
         const planetsVariant = document.querySelectorAll(".planet__variant");
         const planet = document.querySelector(".game__secret-img");
 
+        body.style.backgroundImage =
+          "url(../../assets/images/light-theme-bg.jpeg)";
         questionsBlock[0].style.backgroundColor = "rgb(120 171 183)";
         nextRound.classList.add("btn_light");
         planetsVariant.forEach((el) => el.classList.add("btn_light"));
@@ -60,6 +63,7 @@ function changeTheme() {
         const planetsVariant = document.querySelectorAll(".planet__variant");
         const planet = document.querySelector(".game__secret-img");
 
+        body.style.backgroundImage = "url(../../assets/images/moon.jpeg)";
         questionsBlock[0].style.backgroundColor = "rgb(84 73 163)";
         planetsVariant.forEach((el) => el.classList.remove("btn_light"));
         nextRound.classList.remove("btn_light");
@@ -112,6 +116,8 @@ function getLocalStorage() {
         const planetsVariant = document.querySelectorAll(".planet__variant");
         const planet = document.querySelector(".game__secret-img");
 
+        body.style.backgroundImage =
+          "url(../../assets/images/light-theme-bg.jpeg)";
         questionsBlock[0].style.backgroundColor = "rgb(120 171 183)";
         nextRound.classList.add("btn_light");
         planetsVariant.forEach((el) => el.classList.add("btn_light"));
@@ -151,6 +157,7 @@ function getLocalStorage() {
         const planetsVariant = document.querySelectorAll(".planet__variant");
         const planet = document.querySelector(".game__secret-img");
 
+        body.style.backgroundImage = "url(../../assets/images/moon.jpeg)";
         questionsBlock[0].style.backgroundColor = "rgb(84 73 163)";
         planetsVariant.forEach((el) => el.classList.remove("btn_light"));
         nextRound.classList.remove("btn_light");
