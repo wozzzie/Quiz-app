@@ -90,11 +90,12 @@ secretPlay.addEventListener("click", () => {
 
 function clickAnswerBtn(event) {
   const eventClassList = [...event.target.classList].flat();
+
   const isPressedBtn =
     eventClassList.indexOf("planet__variant_wrong") === -1 &&
     eventClassList.indexOf("planet__variant_right") === -1;
 
-  if (isPressedBtn) {
+  if (isPressedBtn && !win) {
     if (attempt === 0) {
       scoreOfGame += 5;
     }

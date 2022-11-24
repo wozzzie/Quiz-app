@@ -2,7 +2,6 @@ const switchTheme = document.querySelector(".switch-theme");
 const body = document.querySelector(".body");
 
 let themeDefault = "dark";
-console.log(window.location.href);
 
 function changeTheme() {
   switchTheme.addEventListener("click", () => {
