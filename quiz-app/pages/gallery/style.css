@@ -6,9 +6,9 @@
   transition: 0.5s;
 }
 
-.main {
+/* .main {
   height: calc(100vh - 160px);
-}
+} */
 
 .gallery {
   /* max-width: 900px; */
