@@ -38,6 +38,11 @@ const playBtn = document.querySelector(".game__play"),
   planetDuration = document.querySelector(".planet__durationTime"),
   planetProgressBar = document.querySelector(".planet__progress-bar");
 
+const volumeIcon = document.querySelector(".volume-icon"),
+  volumeInput = document.querySelector(".volume"),
+  volumeIconGame = document.querySelector(".game__volume-icon"),
+  gameVolumeInput = document.querySelector(".volume-game");
+
 nextRound.disabled = true;
 nextRound.classList.add("game__button_disabled");
 audioPlay.classList.add("hidden");
@@ -55,6 +60,96 @@ let isSecretPlay = false;
 let audio = new Audio();
 let planetAudio = new Audio();
 let audioBtn = new Audio();
+
+let planetAudioVolume = 0.5;
+planetAudio.volume = planetAudioVolume;
+
+let audioVolume = 0.5;
+audio.volume = audioVolume;
+
+function changeVolume() {
+  planetAudio.muted = !planetAudio.muted;
+
+  if (planetAudio.muted) {
+    planetAudioVolume = volumeInput.value;
+    volumeInput.value = 0;
+  } else {
+    volumeInput.value = planetAudioVolume;
+  }
+
+  volumeIcon.classList.toggle("mute");
+}
+
+function changeGameVolume() {
+  audio.muted = !audio.muted;
+
+  if (audio.muted) {
+    audioVolume = gameVolumeInput.value;
+    gameVolumeInput.value = 0;
+  } else {
+    gameVolumeInput.value = audioVolume;
+  }
+
+  volumeIconGame.classList.toggle("mute");
+}
+
+function handleGradient(firstVal, secondVal) {
+  return `linear-gradient(to right, rgb(189, 174, 130) 0%, 
+            rgb(189, 174, 130) ${firstVal}%,
+            rgb(200, 200, 200) ${secondVal}%,
+            rgb(200, 200, 200) 100%)`;
+}
+
+function handleRangeUpdate() {
+  planetAudio.volume = volumeInput.value;
+
+  volumeInput.style.background = handleGradient(
+    volumeInput.value * 100,
+    volumeInput.value * 100
+  );
+}
+
+function handleRangeUpdateGame() {
+  audio.volume = gameVolumeInput.value;
+
+  gameVolumeInput.style.background = handleGradient(
+    gameVolumeInput.value * 100,
+    gameVolumeInput.value * 100
+  );
+}
+
+volumeInput.addEventListener("input", () => {
+  handleRangeUpdate();
+
+  if (+volumeInput.value === 0) {
+    volumeIcon.classList.add("mute");
+  } else {
+    volumeIcon.classList.remove("mute");
+  }
+});
+
+gameVolumeInput.addEventListener("input", () => {
+  handleRangeUpdateGame();
+
+  if (+gameVolumeInput.value === 0) {
+    volumeIconGame.classList.add("mute");
+  } else {
+    volumeIconGame.classList.remove("mute");
+  }
+});
+
+volumeIcon.addEventListener("click", () => {
+  changeVolume();
+  handleRangeUpdate();
+});
+
+volumeIconGame.addEventListener("click", () => {
+  changeGameVolume();
+  handleRangeUpdateGame();
+});
+
+handleRangeUpdate();
+handleRangeUpdateGame();
 
 function random(data) {
   return data[Math.floor(Math.random() * data.length)];
