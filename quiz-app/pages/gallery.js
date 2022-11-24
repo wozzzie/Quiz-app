@@ -1,7 +1,7 @@
 const galleryData = [
   [
     {
-      id: 1,
+      id: "The Sun",
       name: "The Sun",
       astronomicalBodies: "Stars",
       description:
@@ -10,7 +10,7 @@ const galleryData = [
       audio: "../../assets/audio/earth.mp3",
     },
     {
-      id: 2,
+      id: "Mercury",
       name: "Mercury",
       astronomicalBodies: "Planet",
       description:
@@ -19,7 +19,7 @@ const galleryData = [
       audio: "../../assets/audio/mercury.mp3",
     },
     {
-      id: 3,
+      id: "Venus",
       name: "Venus",
       astronomicalBodies: "Planet",
       description:
@@ -28,7 +28,7 @@ const galleryData = [
       audio: "../../assets/audio/venera.mp3",
     },
     {
-      id: 4,
+      id: "Earth",
       name: "Earth",
       astronomicalBodies: "Planet",
       description:
@@ -37,7 +37,7 @@ const galleryData = [
       audio: "../../assets/audio/earth.mp3",
     },
     {
-      id: 5,
+      id: "Mars",
       name: "Mars",
       astronomicalBodies: "Planet",
       description:
@@ -46,7 +46,7 @@ const galleryData = [
       audio: "../../assets/audio/mars.mp3",
     },
     {
-      id: 6,
+      id: "Jupiter",
       name: "Jupiter",
       astronomicalBodies: "Planet",
       description:
@@ -55,7 +55,7 @@ const galleryData = [
       audio: "../../assets/audio/jupiter.mp3",
     },
     {
-      id: 7,
+      id: "Saturn",
       name: "Saturn",
       astronomicalBodies: "Planet",
       description:
@@ -64,7 +64,7 @@ const galleryData = [
       audio: "../../assets/audio/saturn.mp3",
     },
     {
-      id: 8,
+      id: "Uranus",
       name: "Uranus",
       astronomicalBodies: "Planet",
       description:
@@ -73,7 +73,7 @@ const galleryData = [
       audio: "../../assets/audio/uran.mp3",
     },
     {
-      id: 9,
+      id: "Neptune",
       name: "Neptune",
       astronomicalBodies: "Planet",
       description:
@@ -82,7 +82,7 @@ const galleryData = [
       audio: "../../assets/audio/neptune.mp3",
     },
     {
-      id: 10,
+      id: "Pluto",
       name: "Pluto",
       astronomicalBodies: "Planet",
       description:
@@ -93,7 +93,7 @@ const galleryData = [
   ],
   [
     {
-      id: 1,
+      id: "Yuri Gagarin",
       name: "Yuri Gagarin",
       name_ru: "Юрий Гагарин",
       astronomicalBodies: "Astronaut",
@@ -106,7 +106,7 @@ const galleryData = [
       audio: "../../assets/audio/gagarin.mp3",
     },
     {
-      id: 2,
+      id: "Valentina Tereshkova",
       name: "Valentina Tereshkova",
       name_ru: "Валентина Терешкова",
       astronomicalBodies: "Astronaut",
@@ -119,7 +119,7 @@ const galleryData = [
       audio: "../../assets/audio/tereshkova.mp3",
     },
     {
-      id: 3,
+      id: "Neil Armstrong",
       name: "Neil Armstrong",
       name_ru: "Нил Армстронг",
       astronomicalBodies: "Astronaut",
@@ -132,7 +132,7 @@ const galleryData = [
       audio: "../../assets/audio/neil-armstrong.mp3",
     },
     {
-      id: 4,
+      id: "Frank Borman",
       name: "Frank Borman",
       name_ru: "Фрэнк Борман",
       astronomicalBodies: "Astronaut",
@@ -145,7 +145,7 @@ const galleryData = [
       audio: "../../assets/audio/frank.mp3",
     },
     {
-      id: 5,
+      id: "Charles Conrad",
       name: "Charles Conrad",
       name_ru: "Чарльз Конрад",
       astronomicalBodies: "Astronaut",
@@ -158,7 +158,7 @@ const galleryData = [
       audio: "../../assets/audio/conrad.mp3",
     },
     {
-      id: 6,
+      id: "Gherman Titov",
       name: "Gherman Titov",
       name_ru: "Герман Титов",
       astronomicalBodies: "Astronaut",
@@ -166,12 +166,12 @@ const galleryData = [
       description_ru:
         "Герман Степанович Титов был советским космонавтом, который 6 августа 1961 года стал вторым человеком, вышедшим на орбиту Земли на борту Востока-2, до Юрия Гагарина на Востоке-1. Он был четвертым человеком в космосе, считая суборбитальные полеты американских астронавтов. На момент запуска ему не исполнилось 26 лет, и он был самым молодым человеком, побывавшим в космосе",
       description:
-        "Gherman Stepanovich Titov was a Soviet cosmonaut who, on 6 August 1961, became the second human to orbit the Earth, aboard Vostok 2, preceded by Yuri Gagarin on Vostok 1. He was the fourth person in space, counting suborbital voyages of US astronauts Alan Shepard and Gus Grissom. A month short of 26 years old at launch, he was the youngest person to fly in space.",
+        "Gherman Stepanovich Titov was a Soviet cosmonaut who, on 6 August 1961, became the second human to orbit the Earth, aboard Vostok 2, preceded by Yuri Gagarin on Vostok 1. He was the fourth person in space. He was the youngest person to fly in space.",
       image: "../../assets/images/gherman-titov.jpeg",
       audio: "../../assets/audio/titov.mp3",
     },
     {
-      id: 7,
+      id: "Vela Pulsar",
       name: "Vela Pulsar",
       name_ru: "Пульсар в Парусах",
       astronomicalBodies: "Stars",
@@ -179,12 +179,12 @@ const galleryData = [
       description_ru:
         "Пульсар — это сильно намагниченная вращающаяся нейтронная звезда, испускающая лучи электромагнитного излучения за пределы своих магнитных полюсов. Это излучение можно наблюдать, только когда луч излучения направлен на Землю (аналогично тому, как маяк можно увидеть, только когда свет направлен в сторону наблюдателя) и отвечает за импульсное появление излучения.",
       description:
-        "A pulsar is a highly magnetized rotating neutron star that emits beams of electromagnetic radiation out of its magnetic poles. This radiation can be observed only when a beam of emission is pointing toward Earth (similar to the way a lighthouse can be seen only when the light is pointed in the direction of an observer), and is responsible for the pulsed appearance of emission.",
+        "A pulsar is a highly magnetized rotating neutron star that emits beams of electromagnetic radiation out of its magnetic poles. This radiation can be observed only when a beam of emission is pointing toward Earth, and is responsible for the pulsed appearance of emission.",
       image: "../../assets/images/vela-pulsar.jpeg",
       audio: "../../assets/audio/pulsar-vela.mp3",
     },
     {
-      id: 8,
+      id: "Iota Draconis",
       name: "Iota Draconis",
       name_ru: "Йота Дракона",
       astronomicalBodies: "Stars",
@@ -197,7 +197,7 @@ const galleryData = [
       audio: "../../assets/audio/iota.mp3",
     },
     {
-      id: 9,
+      id: "Crab Pulsar",
       name: "Crab Pulsar",
       name_ru: "PSR B0531+21",
       astronomicalBodies: "Stars",
@@ -205,12 +205,12 @@ const galleryData = [
       description_ru:
         "Пульсар — это сильно намагниченная вращающаяся нейтронная звезда, испускающая лучи электромагнитного излучения за пределы своих магнитных полюсов. Это излучение можно наблюдать, только когда луч излучения направлен на Землю (аналогично тому, как маяк можно увидеть, только когда свет направлен в сторону наблюдателя) и отвечает за импульсное появление излучения.",
       description:
-        "A pulsar is a highly magnetized rotating neutron star that emits beams of electromagnetic radiation out of its magnetic poles. This radiation can be observed only when a beam of emission is pointing toward Earth (similar to the way a lighthouse can be seen only when the light is pointed in the direction of an observer), and is responsible for the pulsed appearance of emission.",
+        "A pulsar is a highly magnetized rotating neutron star that emits beams of electromagnetic radiation out of its magnetic poles. This radiation can be observed only when a beam of emission is pointing toward Earth, and is responsible for the pulsed appearance of emission.",
       image: "../../assets/images/crab-pulsar.jpeg",
       audio: "../../assets/audio/pulsar-crab.mp3",
     },
     {
-      id: 10,
+      id: "Magnetar",
       name: "Magnetar",
       name_ru: "Магнетар",
       astronomicalBodies: "Stars",
@@ -221,6 +221,138 @@ const galleryData = [
         "A magnetar is a type of neutron star with an extremely powerful magnetic field. The magnetic-field decay powers the emission of high-energy electromagnetic radiation, particularly X-rays and gamma rays.",
       image: "../../assets/images/magnetar.jpeg",
       audio: "../../assets/audio/magnetar.mp3",
+    },
+  ],
+  [
+    {
+      id: "Satellite navigation",
+      name: "Satellite navigation",
+      name_ru: "Спутниковая система навигации",
+      astronomicalBodies: "Vehicle",
+      astronomicalBodies_ru: "Оборудование",
+      description_ru:
+        "Спутниковая навигационная система — это система, использующая спутники для обеспечения автономного геопространственного позиционирования. Она позволяет спутниковым навигационным устройствам определять свое местоположение с высокой точностью.",
+      description:
+        "A satellite navigation or satnav system is a system that uses satellites to provide autonomous geo-spatial positioning. It allows satellite navigation devices to determine their location to high precision.",
+      image: "../../assets/images/Satellite-navigation.png",
+      audio: "../../assets/audio/sputnik.mp3",
+    },
+    {
+      id: "Launch vehicle",
+      name: "Launch vehicle",
+      name_ru: "Ракета-носитель",
+      astronomicalBodies: "Vehicle",
+      astronomicalBodies_ru: "Оборудование",
+      description_ru:
+        "Ракета-носитель — это ракета, предназначенная для доставки полезной нагрузки (космических кораблей или спутников) с поверхности Земли в космическое пространство. Большинство ракет-носителей работают со стартовых площадок при поддержке центра управления запуском и таких систем, как сборка корабля и заправка.",
+      description:
+        "A launch vehicle or carrier rocket is a rocket designed to carry a payload (spacecraft or satellites) from the Earth's surface to outer space. Most launch vehicles operate from a launch pads, supported by a launch control center and systems such as vehicle assembly and fueling.",
+      image: "../../assets/images/Launch-vehicle.png",
+      audio: "../../assets/audio/rocket.mp3",
+    },
+    {
+      id: "Sonar",
+      name: "Sonar",
+      name_ru: "Сонар",
+      astronomicalBodies: "Vehicle",
+      astronomicalBodies_ru: "Оборудование",
+      description_ru:
+        "Сонар — это метод, использующий распространение звука для навигации, измерения расстояний (определения дальности), связи или обнаружения объектов на поверхности воды или под ней, таких как другие суда. Два типа технологии имеют общее название «сонара»: пассивный гидролокатор. по сути, слушает звук, издаваемый судами; активный гидролокатор излучает звуковые импульсы и прислушивается к эху",
+      description:
+        "Sonar is a technique that uses sound propagation to navigate, measure distances (ranging), communicate with or detect objects on or under the surface of the water, such as other vessels. Passive sonar is essentially listening for the sound made by vessels; active sonar is emitting pulses of sounds and listening for echoes",
+      image: "../../assets/images/sonar.jpeg",
+      audio: "../../assets/audio/sonar.mp3",
+    },
+    {
+      id: "Space Shuttle",
+      name: "Space Shuttle",
+      name_ru: "Шаттл",
+      astronomicalBodies: "Vehicle",
+      astronomicalBodies_ru: "Оборудование",
+      description_ru:
+        "Спейс Шаттл — это списанная, частично многоразовая система низкоорбитальных космических кораблей, эксплуатируемая с 1981 по 2011 год Национальным управлением по аэронавтике и исследованию космического пространства США (НАСА) в рамках программы «Спейс шаттл",
+      description:
+        "The Space Shuttle is a retired, partially reusable low Earth orbital spacecraft system operated from 1981 to 2011 by the U.S. National Aeronautics and Space Administration (NASA) as part of the Space Shuttle program.",
+      image: "../../assets/images/Space-Shuttle.png",
+      audio: "../../assets/audio/shuttle.mp3",
+    },
+    {
+      id: "Spaceplane",
+      name: "Spaceplane",
+      name_ru: "Космоплан",
+      astronomicalBodies: "Vehicle",
+      astronomicalBodies_ru: "Оборудование",
+      description_ru:
+        "Космоплан — это транспортное средство, которое может летать и планировать, как самолет в атмосфере Земли, и маневрировать, как космический корабль в открытом космосе. Для этого космические самолеты должны сочетать в себе черты как самолетов, так и космических кораблей. Орбитальные космические самолеты, как правило, больше похожи на обычные космические корабли.",
+      description:
+        "A spaceplane is a vehicle that can fly and glide like an aircraft in Earth's atmosphere and maneuver like a spacecraft in outer space. To do so, spaceplanes must incorporate features of both aircraft and spacecraft. Orbital spaceplanes tend to be more similar to conventional spacecraft.",
+      image: "../../assets/images/space-plane.jpeg",
+      audio: "../../assets/audio/spaceplane.mp3",
+    },
+    {
+      id: "Space Station",
+      name: "Space Station",
+      name_ru: "Космическая станция",
+      astronomicalBodies: "Vehicle",
+      astronomicalBodies_ru: "Оборудование",
+      description_ru:
+        "Международная космическая станция (МКС) — крупнейшая в настоящее время модульная космическая станция на низкой околоземной орбите. Это многонациональный совместный проект с участием пяти космических агентств: НАСА (США), Роскосмоса (Россия), JAXA (Япония), ЕКА ( Европа) и CSA (Канада).",
+      description:
+        "The International Space Station (ISS) is the largest modular space station currently in low Earth orbit. It is a multinational collaborative project involving five participating space agencies: NASA (United States), Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada).",
+      image: "../../assets/images/International-Space-Station.jpeg",
+      audio: "../../assets/audio/station.mp3",
+    },
+    {
+      id: "Outer space",
+      name: "Outer space",
+      name_ru: "Космическое пространство",
+      astronomicalBodies: "Cosmos",
+      astronomicalBodies_ru: "Космос",
+      description_ru:
+        "Космическое пространство, обычно сокращенное до космоса, — это пространство, которое существует за пределами Земли и ее атмосферы, а также между небесными телами. Это идеальный вакуум, содержащий низкую плотность частиц",
+      description:
+        "Outer space, commonly shortened to space, is the expanse that exists beyond Earth and its atmosphere and between celestial bodies. Is a perfect vacuum containing a low density of particles.",
+      image: "../../assets/images/outer-space.jpeg",
+      audio: "../../assets/audio/outer-space.mp3",
+    },
+    {
+      id: "Comet",
+      name: "Comet",
+      name_ru: "Комета",
+      astronomicalBodies: "Cosmos",
+      astronomicalBodies_ru: "Космос",
+      description_ru:
+        "Комета — это ледяное маленькое тело Солнечной системы, которое, проходя близко к Солнцу, нагревается и начинает выделять газы, процесс, который называется дегазацией. Это создает видимую атмосферу или кому, а иногда также хвост. Эти явления обусловлены воздействием солнечной радиации и солнечного ветра, воздействующего на ядро кометы",
+      description:
+        "A comet is an icy, small Solar System body that, when passing close to the Sun, warms and begins to release gases, a process that is called outgassing. This produces a visible atmosphere or coma, and sometimes also a tail. These phenomena are due to the effects of solar radiation and the solar wind acting upon the nucleus of the comet.",
+      image: "../../assets/images/comet.png",
+      audio: "../../assets/audio/comet.mp3",
+    },
+    {
+      id: "Black hole",
+      name: "Black hole",
+      name_ru: "Черная дыра",
+      astronomicalBodies: "Cosmos",
+      astronomicalBodies_ru: "Космос",
+      description_ru:
+        "Черная дыра — это область пространства-времени, где гравитация настолько сильна, что ничто — ни частицы, ни даже электромагнитное излучение, такое как свет, — не может покинуть ее. Общая теория относительности предсказывает, что достаточно компактная масса может деформировать пространство-время, образуя черную дыра. Граница выхода называется горизонтом событий.",
+      description:
+        "A black hole is a region of spacetime where gravity is so strong that nothing – no particles or even electromagnetic radiation such as light – can escape from it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of no escape is called the event horizon.",
+      image: "../../assets/images/black-hole.jpeg",
+      audio: "../../assets/audio/hole.mp3",
+    },
+    {
+      id: "Geomagnetic storm",
+      name: "Geomagnetic storm",
+      name_ru: "Геомагнитная буря",
+      astronomicalBodies: "Cosmos",
+      astronomicalBodies_ru: "Космос",
+      description_ru:
+        "Геомагнитная буря, также известная как магнитная буря, представляет собой временное возмущение магнитосферы Земли, вызванное ударной волной солнечного ветра и/или облаком магнитного поля, которое взаимодействует с магнитным полем Земли.",
+      description:
+        "A geomagnetic storm, also known as a magnetic storm, is a temporary disturbance of the Earth's magnetosphere caused by a solar wind shock wave and/or cloud of magnetic field that interacts with the Earth's magnetic field.",
+      image: "../../assets/images/storm.jpeg",
+      audio: "../../assets/audio/geo.mp3",
     },
   ],
 ];
