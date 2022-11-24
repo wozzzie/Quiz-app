@@ -11,7 +11,12 @@ const popupName = document.querySelector(".planet__name");
 const astronomicalBodies = document.querySelector(
   ".planet__astronomical-bodies"
 );
+const astroStarts = document.querySelector(".btn-astroStarts");
+const cosVehicle = document.querySelector(".btn-cosVehicle");
+const btnPlanets = document.querySelector(".btn-planets");
 const popupDescription = document.querySelector(".planet__description");
+const galleryName = document.querySelectorAll(".gallery__name");
+const galleryImg = document.querySelectorAll(".gallery__img");
 
 const playBtn = document.querySelector(".game__play"),
   planetName = document.querySelector(".game__secret-planet"),
@@ -123,11 +128,13 @@ progressBar.addEventListener("input", () => {
 });
 
 let galleryArr = galleryData.flat();
+console.log(galleryArr)
 function setMoreInfo() {
   moreBtn.forEach((item) =>
     item.addEventListener("click", (event) => {
       galleryArr.forEach((el) => {
         if (event.target.id === el.name) {
+          console.log(galleryArr)
           popup.classList.add("popup_open");
           popupImg.src = el.image;
           popupName.innerHTML = el.name;
@@ -142,6 +149,34 @@ function setMoreInfo() {
 }
 
 setMoreInfo();
+
+let arrOfNames = Array.from(galleryName);
+const arrOfImages = Array.from(galleryImg);
+const moreBnts = Array.from(moreBtn)
+console.log(moreBnts.forEach(el => console.log(el.id)))
+renderNames(galleryData[0]);
+
+function renderNames(data) {
+  data.forEach((el, index) => {
+    arrOfNames[index].innerHTML = el.name;
+    arrOfImages[index].src = el.image;
+    moreBnts[index].id = el.id;
+  });
+}
+
+astroStarts.addEventListener("click", () => {
+  renderNames(galleryData[1]);
+});
+
+cosVehicle.addEventListener("click", () => {
+  renderNames(galleryData[2]);
+});
+
+btnPlanets.addEventListener("click", () => {
+  renderNames(galleryData[0]);
+});
+
+//POPUP
 
 popupClose.addEventListener("click", () => {
   popup.classList.remove("popup_open");
