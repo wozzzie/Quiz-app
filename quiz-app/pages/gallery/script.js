@@ -21,8 +21,60 @@ const playBtn = document.querySelector(".game__play"),
   audioPlay = document.querySelector(".game__audio-play"),
   secretPlay = document.querySelector(".planet__play");
 
+const volumeIcon = document.querySelector(".volume-icon"),
+  volumeInput = document.querySelector(".volume");
+
 let galleryAudio = new Audio();
 let isGalleryPlay = false;
+
+let galleryAudioVolume = 0.5;
+galleryAudio.volume = galleryAudioVolume;
+
+function changeVolume() {
+  galleryAudio.muted = !galleryAudio.muted;
+
+  if (galleryAudio.muted) {
+    galleryAudioVolume = volumeInput.value;
+    volumeInput.value = 0;
+  } else {
+    volumeInput.value = galleryAudioVolume;
+  }
+
+  volumeIcon.classList.toggle("mute");
+}
+
+function handleGradient(firstVal, secondVal) {
+  return `linear-gradient(to right, rgb(189, 174, 130) 0%, 
+            rgb(189, 174, 130) ${firstVal}%,
+            rgb(200, 200, 200) ${secondVal}%,
+            rgb(200, 200, 200) 100%)`;
+}
+
+function handleRangeUpdate() {
+  galleryAudio.volume = volumeInput.value;
+
+  volumeInput.style.background = handleGradient(
+    volumeInput.value * 100,
+    volumeInput.value * 100
+  );
+}
+
+volumeInput.addEventListener("input", () => {
+  handleRangeUpdate();
+
+  if (+volumeInput.value === 0) {
+    volumeIcon.classList.add("mute");
+  } else {
+    volumeIcon.classList.remove("mute");
+  }
+});
+
+volumeIcon.addEventListener("click", () => {
+  changeVolume();
+  handleRangeUpdate();
+});
+
+handleRangeUpdate();
 
 function playPause() {
   if (!isGalleryPlay) {

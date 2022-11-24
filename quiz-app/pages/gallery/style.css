@@ -102,10 +102,8 @@
 }
 
 .planet__card {
-  height: 391px;
-
   position: relative;
-  height: 465px;
+  height: 500px;
   background: transparent;
   border-radius: 20px;
   padding: 15px 15px 19px 16px;
@@ -257,6 +255,76 @@
   );
 }
 
+.planet__volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 7px;
+}
+
+.play-icon {
+  width: 40px;
+  height: 36px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.play-icon:hover,
+.play-icon:active {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.volume-icon {
+  background-image: url("../../assets/icons/volume.svg");
+}
+
+.mute {
+  background-image: url("../../assets/icons/mute.svg");
+}
+
+.volume {
+  background: linear-gradient(
+    to right,
+    #bdae82 0%,
+    #bdae82 0%,
+    #c8c8c8 0%,
+    #c8c8c8 100%
+  );
+  height: 10px;
+  width: calc(80% - 160px);
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.volume {
+  background: linear-gradient(
+    to right,
+    #bdae82 0%,
+    #bdae82 40%,
+    #c8c8c8 40%,
+    #c8c8c8 100%
+  );
+}
+
+.volume {
+  cursor: pointer;
+  width: calc(50% - 40px);
+  border-radius: 5px;
+}
+
+.volume::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: #ffffff;
+}
 
 @media (max-width: 1024px) {
   .main {
