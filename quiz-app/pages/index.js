@@ -202,14 +202,4 @@ window.addEventListener("beforeunload", () => {
 
 window.addEventListener("load", getLocalStorage);
 
-// Cashing images
 
-function preloadImages() {
-  const images = [];
-
-  images.forEach((el) => {
-    const img = new Image();
-    img.src = `../../assets/imges/${el}.jpeg`;
-  });
-}
-preloadImages();
